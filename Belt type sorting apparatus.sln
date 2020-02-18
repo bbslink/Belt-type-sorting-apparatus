@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Belt type sorting apparatus", "Belt type sorting apparatus\Belt type sorting apparatus.csproj", "{8B36913F-7B69-4018-BDB9-52071C69F248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SXTisCam", "SXTisCam\SXTisCam\SXTisCam.csproj", "{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SXModelsControl", "SXModelsControl\SXModelsControl.csproj", "{3E616B96-1BF2-4C18-8A22-2392443DCC4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Debug|Any CPU.Build.0 = Debug|x64
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Debug|x64.ActiveCfg = Debug|x64
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Debug|x64.Build.0 = Debug|x64
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Release|x64.ActiveCfg = Release|x64
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Release|x64.Build.0 = Release|x64
+		{8B36913F-7B69-4018-BDB9-52071C69F248}.Release|x86.ActiveCfg = Release|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Release|x64.ActiveCfg = Release|Any CPU
+		{BFBF3DEA-4C0E-4F46-8F21-29FF4B8CB2E4}.Release|x86.ActiveCfg = Release|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Release|x64.ActiveCfg = Release|Any CPU
+		{3E616B96-1BF2-4C18-8A22-2392443DCC4E}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA28A5A1-55D2-4706-95AC-5C9E3322A7DE}
+	EndGlobalSection
+EndGlobal

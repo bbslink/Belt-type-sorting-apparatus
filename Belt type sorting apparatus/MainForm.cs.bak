@@ -1,0 +1,178 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Belt_type_sorting_apparatus
+{ 
+    public partial class MainForm : Form
+    {
+        SystemEvents sysEvent = SystemEvents.GetSysEventInstance();
+
+        #region 窗体
+        public MainForm()
+        {
+            InitializeComponent();
+            
+
+            
+            sysEvent.showRealInfoEvent += new SystemEvents.showRealInfoEventHandler(RefreshRealInfo);
+        }
+
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(MessageBox.Show("确定要退出程序吗？，请保存相关参数及设定", "退出程序",
+                MessageBoxButtons.OKCancel)==DialogResult.OK)
+            {
+                Dispose();
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }  
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            //初始化线程
+            Thread initThread;
+            initThread = new Thread(new ThreadStart(InitSystem.InitSystemParam));
+            initThread.IsBackground = true;
+            initThread.Start();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region 委托函数
+        /// <summary>
+        /// 实时显示状态
+        /// </summary>
+        /// <param name="mess"></param>
+        /// <param name="messLevel">warnMess警告   infoMess普通信息</param>
+        private void RefreshRealInfo(string mess, int messLevel)
+        {
+            try
+            {
+                switch (messLevel)
+                {
+                    case CommonData.infoMess:
+                        this.rtInformation.Invoke(new Action(() =>
+                        {
+                            this.rtInformation.AppendText(DateTime.Now.ToString("yyyy-MM-dd HH:mm  ") + mess + "\r\n");
+                        }));
+                        break;
+                    case CommonData.warnMess:
+                        this.rtInformation.Invoke(new Action(() =>
+                        {
+                            this.rtInformation.AppendText(DateTime.Now.ToString("yyyy-MM-dd HH:mm 【警告】") + mess + "\r\n");//:ss.fff
+                        }));
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteExceptionLog(this.GetType(), ex);
+            }
+        }
+
+
+        #endregion
+
+
+        #region 按键
+        private void btnMachineSetting_Click(object sender, EventArgs e)
+        {
+            MachineSettingForm machineSettingForm = new MachineSettingForm();
+            machineSettingForm.ShowDialog();
+            // Open the machine setting form 
+
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("确定要退出程序吗？，请保存相关参数及设定", "退出程序", MessageBoxButtons.OKCancel) ==
+                DialogResult.OK)
+            {
+                Dispose();
+                Application.Exit();
+            }            
+        }
+
+        private void pbCompanyLog_Click(object sender, EventArgs e)
+        {
+            AboutRuixiang aboutRuixiang=new AboutRuixiang();
+            //Open the company main product introduction form
+            aboutRuixiang.ShowDialog();            
+        }
+
+
+        private void btnNormalOperation_Click(object sender, EventArgs e)
+        {
+            NormalOperation normalOperation = new NormalOperation();
+            //Open the normal operation form
+            normalOperation.ShowDialog();
+        }
+
+        private void btnWorkDataSetting_Click(object sender, EventArgs e)
+        {
+            WorkDataSetting workDataSetting = new WorkDataSetting();
+            //Open the work data setting form
+            workDataSetting.ShowDialog();
+        }
+
+<<<<<<< .mine
+
+
+
+
+
+||||||| .r34
+
+        
+=======
+>>>>>>> .r37
+        #endregion
+
+<<<<<<< .mine
+        private void btnManualControl_Click(object sender, EventArgs e)
+        {
+            ManualControl manualControl = new ManualControl();
+            manualControl.ShowDialog();
+        }
+||||||| .r34
+=======
+        private void btnManualControl_Click(object sender, EventArgs e)
+        {
+            ManualControl manualControl = new ManualControl();
+            manualControl.ShowDialog(); //Open the manual control form
+        }
+>>>>>>> .r37
+
+<<<<<<< .mine
+        private void btnMachineStatus_Click(object sender, EventArgs e)
+        {
+            MachineStateForm machineStateForm = new MachineStateForm();
+            machineStateForm.ShowDialog();
+        }
+||||||| .r34
+
+=======
+        private void btnOptionalEquipment_Click(object sender, EventArgs e)
+        {
+            OptionEquipment optionEquipment = new OptionEquipment();
+            optionEquipment.ShowDialog(); //Open the front or back machine interlock form
+        }
+>>>>>>> .r37
+    }
+}
