@@ -704,6 +704,7 @@ namespace Belt_type_sorting_apparatus
                     }
                 }
             }
+            /////////////////////////test
 
 
         }
