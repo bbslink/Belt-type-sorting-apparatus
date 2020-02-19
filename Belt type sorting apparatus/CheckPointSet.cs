@@ -653,17 +653,19 @@ namespace Belt_type_sorting_apparatus
 
 
             double detangle;
-            int xcommon = (int)(curX2 + columnDis * (columnNum - 1) * 1000);
+            //int xcommon = (int)(curX2 + columnDis * (columnNum - 1) * 1000);       
+            int xcommon = (int)(curX2 - columnDis * (columnNum - 1) * 1000);
             int ycommon = (int)(curY2 + rowDis * (rowNum - 1) * 1000);
             double angcommon = Math.Atan2(ycommon - curY2, xcommon - curX2);
-            // double angcur = Math.Atan2(curY - curY2, curX - curX2);
-         
-
             detangle = Math.Atan2(curY_1 - curY2, curX_1 - curX2) - angcommon;
 
+            //for (int xi = 0; xi < columnNum; xi++)
+            //{
+            //    xPoints[xi] = (int)(curX2 + xi * columnDis * 1000);  
+            //}
             for (int xi = 0; xi < columnNum; xi++)
             {
-                xPoints[xi] = (int)(curX2 + xi * columnDis * 1000);  
+                xPoints[xi] = (int)(curX2 - xi * columnDis * 1000);
             }
             for (int yi = 0; yi < rowNum; yi++)
             {
@@ -682,7 +684,7 @@ namespace Belt_type_sorting_apparatus
                         double s = Math.Atan2(yPoints[j] - curY2, xPoints[i] - curX2) + detangle;
                         double q = Math.Sqrt(Math.Pow((yPoints[j] - curY2), 2) + Math.Pow((xPoints[i] - curX2), 2));
                         int thisX = (int)(curX2 + q * Math.Cos(s));
-                        int thisY = (int)(curY2 + q * Math.Sin(s));
+                        int thisY = (int)(curY2 + q * Math.Sin(s));            
                         string[] curData = new string[] { (i * rowNum + j + curCount).ToString(), thisX.ToString(), thisY.ToString(), cb_SelectProModel1.Text };
                         dgv_ProPoints1.Rows.Add(curData);
                         curIndex = j;
@@ -717,7 +719,7 @@ namespace Belt_type_sorting_apparatus
                     curData = new string[] { "0", CardControl.AxisNowPosition(CommonData.axisProductReceive_Behind).ToString(), CardControl.AxisNowPosition(CommonData.axisCameraUp).ToString(), cb_SelectProModel1.Text };
                 }
                 else if (cb_SelectProModel1.SelectedIndex == 0)
-                {
+                {    
                     curData = new string[] { "0", CardControl.AxisNowPosition(CommonData.axisProductReceive_Front).ToString(), CardControl.AxisNowPosition(CommonData.axisCameraUp).ToString(), cb_SelectProModel1.Text };
                 }
                 else
@@ -741,7 +743,7 @@ namespace Belt_type_sorting_apparatus
                 {
                     MessageBox.Show("请选择模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
-                }
+                }   
                 dgv_ProPoints2.Rows.Add(curData);
             }
             else if (temp.Name.Equals("btn_Teach3"))
