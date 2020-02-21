@@ -25,6 +25,8 @@ namespace Belt_type_sorting_apparatus
         int dgv_selectRowIndex = 0;//datagridview中选中的点的行号
         int curX_1 = 0;
         int curY_1 = 0;
+        int curDepthDelta_X = 0;
+        int curDepthDelta_Y = 0;
         int curSelectData = -1;
         public CheckPointSet()
         {
@@ -464,10 +466,66 @@ namespace Belt_type_sorting_apparatus
         }
         private void button12_Click(object sender, EventArgs e)
         {
+            if (cb_SelectProModel3.SelectedIndex < 0)
+            {
+                MessageBox.Show("请选择模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (MessageBox.Show("是否以当前位置为基准生成模板的【" + cb_SelectProModel3.Text + "】检测坐标？", "询问", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            {
+                return;
+            }
+
+            if (CheckIsCompelte(3))
+            {
+                if (MessageBox.Show("模板【" + cb_SelectProModel3.Text + "】的工作点位已存在,是否覆盖？", "询问", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                {
+                    //return;
+                }
+                else
+                {
+                    //删除表格中数据
+                    dgv_ProPoints3.Rows.Clear();
+                }
+            }
+
+
+
+            int curCount = dgv_ProPoints3.Rows.Count;//当前已有点位数量
+            ArrayList curArrayList;
+            if (cb_SelectProModel3.SelectedIndex == 0)
+            {
+                curArrayList = CurUpCameraFrontModelClass.ModelPoints;
+            }
+            else
+            {
+                curArrayList = CurUpCameraBehindModelClass.ModelPoints;
+            }
+
+            if (curArrayList == null || curArrayList.Count == 0)
+            {
+
+                MessageBox.Show("偏移检测模板数据为空，请检查！");
+                return;
+            }
+            int i = 0;
+            foreach (var curKV in curArrayList)
+            {
+
+                string[] curArray = curKV.ToString().Split(' ');
+
+                string[] curData = new string[] { (i + curCount).ToString(), curArray[0]+ curDepthDelta_X, curArray[1]+ curDepthDelta_Y, curArray[1] + curDepthDelta_Y+1844, cb_SelectProModel3.Text };
+                dgv_ProPoints3.Rows.Add(curData);
+                i++;
+
+            }
+
+
 
         }
 
-      
+
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -1163,6 +1221,30 @@ namespace Belt_type_sorting_apparatus
         private void btn_ExcutePoint_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            string[] curArray_front = CurUpCameraFrontModelClass.ModelPoints[0].ToString().Split(' ');
+            string[] curArray_behind = CurUpCameraBehindModelClass.ModelPoints[0].ToString().Split(' ');
+         
+
+            if (cb_SelectProModel3.SelectedIndex == 0)
+            {
+                curDepthDelta_X = CardControl.AxisNowPosition(CommonData.axisProductReceive_Front)- Convert.ToInt32(curArray_front[0]);
+                curDepthDelta_Y = CardControl.AxisNowPosition(CommonData.axisUpDepth_CheckMove) - Convert.ToInt32(curArray_front[1]);
+            }
+            else if (cb_SelectProModel3.SelectedIndex == 1)
+            {
+                curDepthDelta_Y = CardControl.AxisNowPosition(CommonData.axisProductReceive_Behind) - Convert.ToInt32(curArray_behind[0]);
+                curDepthDelta_Y = CardControl.AxisNowPosition(CommonData.axisUpDepth_CheckMove) - Convert.ToInt32(curArray_behind[1]);
+            }
+            else
+            {
+                MessageBox.Show("请选择模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+          
         }
     }
 }

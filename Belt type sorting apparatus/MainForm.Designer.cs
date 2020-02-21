@@ -46,30 +46,33 @@
             this.info_worry = new System.Windows.Forms.TabPage();
             this.rb_ErrorInfo = new System.Windows.Forms.RichTextBox();
             this.Design = new System.Windows.Forms.TabPage();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox29 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
-            this.txtNGProducts = new System.Windows.Forms.TextBox();
-            this.txtGoodProducts = new System.Windows.Forms.TextBox();
-            this.txtFinished = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtNGProducts = new System.Windows.Forms.TextBox();
+            this.txtFinished = new System.Windows.Forms.TextBox();
+            this.txtGoodProducts = new System.Windows.Forms.TextBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tb_CurProduct = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -107,15 +110,15 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCompanyLog)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Info.SuspendLayout();
             this.info_worry.SuspendLayout();
             this.Design.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -127,9 +130,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -316,137 +316,26 @@
             this.Design.Text = "生产";
             this.Design.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // groupBox12
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 178);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 19);
-            this.label8.TabIndex = 76;
-            this.label8.Text = "角度偏差：";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(138, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 75;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 151);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 19);
-            this.label10.TabIndex = 74;
-            this.label10.Text = "角度标准值(°)：";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(138, 148);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 73;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 52);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 19);
-            this.label6.TabIndex = 72;
-            this.label6.Text = "探高偏差：";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(138, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 71;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 19);
-            this.label7.TabIndex = 70;
-            this.label7.Text = "探高标准值：";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(138, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 69;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(98, 511);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "保存";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(22, 123);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(93, 30);
-            this.btnReset.TabIndex = 2;
-            this.btnReset.Text = "清零";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 117);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(109, 19);
-            this.label31.TabIndex = 67;
-            this.label31.Text = "宽度偏差：";
-            // 
-            // textBox29
-            // 
-            this.textBox29.Location = new System.Drawing.Point(138, 114);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(100, 26);
-            this.textBox29.TabIndex = 66;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 90);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(129, 19);
-            this.label30.TabIndex = 65;
-            this.label30.Text = "宽度标准值：";
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(138, 87);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 26);
-            this.textBox28.TabIndex = 64;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 59);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(109, 19);
-            this.label29.TabIndex = 63;
-            this.label29.Text = "长度偏差：";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(138, 56);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(100, 26);
-            this.textBox27.TabIndex = 62;
+            this.groupBox12.Controls.Add(this.label24);
+            this.groupBox12.Controls.Add(this.label8);
+            this.groupBox12.Controls.Add(this.label29);
+            this.groupBox12.Controls.Add(this.textBox28);
+            this.groupBox12.Controls.Add(this.label30);
+            this.groupBox12.Controls.Add(this.textBox27);
+            this.groupBox12.Controls.Add(this.label31);
+            this.groupBox12.Controls.Add(this.textBox4);
+            this.groupBox12.Controls.Add(this.textBox29);
+            this.groupBox12.Controls.Add(this.textBox22);
+            this.groupBox12.Controls.Add(this.textBox5);
+            this.groupBox12.Controls.Add(this.label10);
+            this.groupBox12.Location = new System.Drawing.Point(10, 180);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(255, 213);
+            this.groupBox12.TabIndex = 79;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "偏移检测（mm）";
             // 
             // label24
             // 
@@ -457,6 +346,70 @@
             this.label24.TabIndex = 61;
             this.label24.Text = "长度标准值：";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 178);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(109, 19);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "角度偏差：";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 59);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(109, 19);
+            this.label29.TabIndex = 63;
+            this.label29.Text = "长度偏差：";
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(138, 87);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(100, 26);
+            this.textBox28.TabIndex = 64;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 90);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(129, 19);
+            this.label30.TabIndex = 65;
+            this.label30.Text = "宽度标准值：";
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(138, 56);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(100, 26);
+            this.textBox27.TabIndex = 62;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 117);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(109, 19);
+            this.label31.TabIndex = 67;
+            this.label31.Text = "宽度偏差：";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(138, 175);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.TabIndex = 75;
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(138, 114);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(100, 26);
+            this.textBox29.TabIndex = 66;
+            // 
             // textBox22
             // 
             this.textBox22.Location = new System.Drawing.Point(138, 29);
@@ -464,35 +417,37 @@
             this.textBox22.Size = new System.Drawing.Size(100, 26);
             this.textBox22.TabIndex = 60;
             // 
-            // txtNGProducts
+            // textBox5
             // 
-            this.txtNGProducts.Location = new System.Drawing.Point(88, 91);
-            this.txtNGProducts.Name = "txtNGProducts";
-            this.txtNGProducts.Size = new System.Drawing.Size(109, 26);
-            this.txtNGProducts.TabIndex = 1;
+            this.textBox5.Location = new System.Drawing.Point(138, 148);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 26);
+            this.textBox5.TabIndex = 73;
             // 
-            // txtGoodProducts
+            // label10
             // 
-            this.txtGoodProducts.Location = new System.Drawing.Point(88, 58);
-            this.txtGoodProducts.Name = "txtGoodProducts";
-            this.txtGoodProducts.Size = new System.Drawing.Size(109, 26);
-            this.txtGoodProducts.TabIndex = 1;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 151);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 19);
+            this.label10.TabIndex = 74;
+            this.label10.Text = "角度标准值(°)：";
             // 
-            // txtFinished
+            // groupBox11
             // 
-            this.txtFinished.Location = new System.Drawing.Point(88, 24);
-            this.txtFinished.Name = "txtFinished";
-            this.txtFinished.Size = new System.Drawing.Size(109, 26);
-            this.txtFinished.TabIndex = 1;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 93);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 19);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "NG数:";
+            this.groupBox11.Controls.Add(this.label15);
+            this.groupBox11.Controls.Add(this.label13);
+            this.groupBox11.Controls.Add(this.btnReset);
+            this.groupBox11.Controls.Add(this.label17);
+            this.groupBox11.Controls.Add(this.txtNGProducts);
+            this.groupBox11.Controls.Add(this.txtFinished);
+            this.groupBox11.Controls.Add(this.txtGoodProducts);
+            this.groupBox11.Location = new System.Drawing.Point(10, 13);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(255, 161);
+            this.groupBox11.TabIndex = 78;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "产能显示（Pis）";
             // 
             // label15
             // 
@@ -511,6 +466,101 @@
             this.label13.Size = new System.Drawing.Size(79, 19);
             this.label13.TabIndex = 0;
             this.label13.Text = "总完成:";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(22, 123);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(93, 30);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "清零";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 93);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(59, 19);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "NG数:";
+            // 
+            // txtNGProducts
+            // 
+            this.txtNGProducts.Location = new System.Drawing.Point(88, 91);
+            this.txtNGProducts.Name = "txtNGProducts";
+            this.txtNGProducts.Size = new System.Drawing.Size(109, 26);
+            this.txtNGProducts.TabIndex = 1;
+            // 
+            // txtFinished
+            // 
+            this.txtFinished.Location = new System.Drawing.Point(88, 24);
+            this.txtFinished.Name = "txtFinished";
+            this.txtFinished.Size = new System.Drawing.Size(109, 26);
+            this.txtFinished.TabIndex = 1;
+            // 
+            // txtGoodProducts
+            // 
+            this.txtGoodProducts.Location = new System.Drawing.Point(88, 58);
+            this.txtGoodProducts.Name = "txtGoodProducts";
+            this.txtGoodProducts.Size = new System.Drawing.Size(109, 26);
+            this.txtGoodProducts.TabIndex = 1;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label7);
+            this.groupBox10.Controls.Add(this.textBox3);
+            this.groupBox10.Controls.Add(this.textBox2);
+            this.groupBox10.Controls.Add(this.label6);
+            this.groupBox10.Location = new System.Drawing.Point(10, 399);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(255, 83);
+            this.groupBox10.TabIndex = 77;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "探高检测(mm)";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(129, 19);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "探高标准值：";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(138, 19);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 26);
+            this.textBox3.TabIndex = 69;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(138, 49);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.TabIndex = 71;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 52);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 19);
+            this.label6.TabIndex = 72;
+            this.label6.Text = "探高偏差：";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(98, 511);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 35);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "保存";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel2
             // 
@@ -865,56 +915,6 @@
             // 
             this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
             // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.label7);
-            this.groupBox10.Controls.Add(this.textBox3);
-            this.groupBox10.Controls.Add(this.textBox2);
-            this.groupBox10.Controls.Add(this.label6);
-            this.groupBox10.Location = new System.Drawing.Point(10, 399);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(255, 83);
-            this.groupBox10.TabIndex = 77;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "探高检测(mm)";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.label15);
-            this.groupBox11.Controls.Add(this.label13);
-            this.groupBox11.Controls.Add(this.btnReset);
-            this.groupBox11.Controls.Add(this.label17);
-            this.groupBox11.Controls.Add(this.txtNGProducts);
-            this.groupBox11.Controls.Add(this.txtFinished);
-            this.groupBox11.Controls.Add(this.txtGoodProducts);
-            this.groupBox11.Location = new System.Drawing.Point(10, 13);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(255, 161);
-            this.groupBox11.TabIndex = 78;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "产能显示（Pis）";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.label24);
-            this.groupBox12.Controls.Add(this.label8);
-            this.groupBox12.Controls.Add(this.label29);
-            this.groupBox12.Controls.Add(this.textBox28);
-            this.groupBox12.Controls.Add(this.label30);
-            this.groupBox12.Controls.Add(this.textBox27);
-            this.groupBox12.Controls.Add(this.label31);
-            this.groupBox12.Controls.Add(this.textBox4);
-            this.groupBox12.Controls.Add(this.textBox29);
-            this.groupBox12.Controls.Add(this.textBox22);
-            this.groupBox12.Controls.Add(this.textBox5);
-            this.groupBox12.Controls.Add(this.label10);
-            this.groupBox12.Location = new System.Drawing.Point(10, 180);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(255, 213);
-            this.groupBox12.TabIndex = 79;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "偏移检测（mm）";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -946,6 +946,12 @@
             this.Info.ResumeLayout(false);
             this.info_worry.ResumeLayout(false);
             this.Design.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -958,12 +964,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
 
         }

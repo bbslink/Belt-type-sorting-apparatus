@@ -140,10 +140,9 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(664, 988);
+            this.tabControl1.Size = new System.Drawing.Size(498, 790);
             this.tabControl1.TabIndex = 247;
             // 
             // tabPage1
@@ -167,11 +166,10 @@
             this.tabPage1.Controls.Add(this.btn_Teach1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.dgv_ProPoints1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(656, 959);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(490, 764);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "上相机检测";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -181,10 +179,10 @@
             this.btn_FlagSet1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_FlagSet1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_FlagSet1.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_FlagSet1.Location = new System.Drawing.Point(452, 715);
-            this.btn_FlagSet1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_FlagSet1.Location = new System.Drawing.Point(339, 572);
+            this.btn_FlagSet1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_FlagSet1.Name = "btn_FlagSet1";
-            this.btn_FlagSet1.Size = new System.Drawing.Size(137, 49);
+            this.btn_FlagSet1.Size = new System.Drawing.Size(103, 39);
             this.btn_FlagSet1.TabIndex = 265;
             this.btn_FlagSet1.Text = "标志设定";
             this.btn_FlagSet1.UseVisualStyleBackColor = false;
@@ -193,39 +191,37 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(191, 765);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(143, 612);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(82, 15);
+            this.label23.Size = new System.Drawing.Size(65, 12);
             this.label23.TabIndex = 263;
             this.label23.Text = "检测列距：";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(191, 720);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(143, 576);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(82, 15);
+            this.label29.Size = new System.Drawing.Size(65, 12);
             this.label29.TabIndex = 264;
             this.label29.Text = "检测行距：";
             // 
             // tb_ProRowDis
             // 
-            this.tb_ProRowDis.Location = new System.Drawing.Point(304, 715);
-            this.tb_ProRowDis.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tb_ProRowDis.Location = new System.Drawing.Point(228, 572);
+            this.tb_ProRowDis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_ProRowDis.Name = "tb_ProRowDis";
-            this.tb_ProRowDis.Size = new System.Drawing.Size(136, 25);
+            this.tb_ProRowDis.Size = new System.Drawing.Size(103, 21);
             this.tb_ProRowDis.TabIndex = 261;
             this.tb_ProRowDis.Text = "12.5";
             this.tb_ProRowDis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_ProColumnDis
             // 
-            this.tb_ProColumnDis.Location = new System.Drawing.Point(304, 761);
-            this.tb_ProColumnDis.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tb_ProColumnDis.Location = new System.Drawing.Point(228, 609);
+            this.tb_ProColumnDis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_ProColumnDis.Name = "tb_ProColumnDis";
-            this.tb_ProColumnDis.Size = new System.Drawing.Size(136, 25);
+            this.tb_ProColumnDis.Size = new System.Drawing.Size(103, 21);
             this.tb_ProColumnDis.TabIndex = 262;
             this.tb_ProColumnDis.Text = "21";
             this.tb_ProColumnDis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -233,20 +229,18 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(4, 720);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(3, 576);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(52, 15);
+            this.label33.Size = new System.Drawing.Size(41, 12);
             this.label33.TabIndex = 260;
             this.label33.Text = "行数：";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(4, 766);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Location = new System.Drawing.Point(3, 613);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(52, 15);
+            this.label30.Size = new System.Drawing.Size(41, 12);
             this.label30.TabIndex = 259;
             this.label30.Text = "列数：";
             // 
@@ -259,20 +253,19 @@
             this.cb_SelectProModel1.Items.AddRange(new object[] {
             "前载台上相机模板",
             "后载台上相机模板"});
-            this.cb_SelectProModel1.Location = new System.Drawing.Point(449, 648);
-            this.cb_SelectProModel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.cb_SelectProModel1.Location = new System.Drawing.Point(337, 518);
+            this.cb_SelectProModel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_SelectProModel1.Name = "cb_SelectProModel1";
-            this.cb_SelectProModel1.Size = new System.Drawing.Size(191, 28);
+            this.cb_SelectProModel1.Size = new System.Drawing.Size(144, 24);
             this.cb_SelectProModel1.TabIndex = 257;
             this.cb_SelectProModel1.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(449, 606);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(337, 485);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 15);
+            this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 258;
             this.label5.Text = "当前模板：";
             // 
@@ -281,10 +274,10 @@
             this.btn_save1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_save1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save1.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_save1.Location = new System.Drawing.Point(304, 655);
-            this.btn_save1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_save1.Location = new System.Drawing.Point(228, 524);
+            this.btn_save1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_save1.Name = "btn_save1";
-            this.btn_save1.Size = new System.Drawing.Size(137, 49);
+            this.btn_save1.Size = new System.Drawing.Size(103, 39);
             this.btn_save1.TabIndex = 256;
             this.btn_save1.Text = "保存";
             this.btn_save1.UseVisualStyleBackColor = false;
@@ -295,10 +288,10 @@
             this.btn_ExcutePoint.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_ExcutePoint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ExcutePoint.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_ExcutePoint.Location = new System.Drawing.Point(157, 655);
-            this.btn_ExcutePoint.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_ExcutePoint.Location = new System.Drawing.Point(118, 524);
+            this.btn_ExcutePoint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ExcutePoint.Name = "btn_ExcutePoint";
-            this.btn_ExcutePoint.Size = new System.Drawing.Size(133, 49);
+            this.btn_ExcutePoint.Size = new System.Drawing.Size(100, 39);
             this.btn_ExcutePoint.TabIndex = 255;
             this.btn_ExcutePoint.Text = "执行运动";
             this.btn_ExcutePoint.UseVisualStyleBackColor = false;
@@ -306,10 +299,10 @@
             // 
             // tb_InspectResult
             // 
-            this.tb_InspectResult.Location = new System.Drawing.Point(11, 799);
-            this.tb_InspectResult.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tb_InspectResult.Location = new System.Drawing.Point(8, 639);
+            this.tb_InspectResult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_InspectResult.Name = "tb_InspectResult";
-            this.tb_InspectResult.Size = new System.Drawing.Size(629, 146);
+            this.tb_InspectResult.Size = new System.Drawing.Size(473, 118);
             this.tb_InspectResult.TabIndex = 248;
             this.tb_InspectResult.Text = "";
             // 
@@ -318,10 +311,10 @@
             this.btn_ClearPro1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_ClearPro1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ClearPro1.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_ClearPro1.Location = new System.Drawing.Point(304, 586);
-            this.btn_ClearPro1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_ClearPro1.Location = new System.Drawing.Point(228, 469);
+            this.btn_ClearPro1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ClearPro1.Name = "btn_ClearPro1";
-            this.btn_ClearPro1.Size = new System.Drawing.Size(137, 51);
+            this.btn_ClearPro1.Size = new System.Drawing.Size(103, 41);
             this.btn_ClearPro1.TabIndex = 254;
             this.btn_ClearPro1.Text = "全部清除";
             this.btn_ClearPro1.UseVisualStyleBackColor = false;
@@ -332,10 +325,10 @@
             this.btn_SubmitPro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_SubmitPro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_SubmitPro.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_SubmitPro.Location = new System.Drawing.Point(159, 586);
-            this.btn_SubmitPro.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_SubmitPro.Location = new System.Drawing.Point(119, 469);
+            this.btn_SubmitPro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_SubmitPro.Name = "btn_SubmitPro";
-            this.btn_SubmitPro.Size = new System.Drawing.Size(132, 51);
+            this.btn_SubmitPro.Size = new System.Drawing.Size(99, 41);
             this.btn_SubmitPro.TabIndex = 253;
             this.btn_SubmitPro.Text = "提交生成";
             this.btn_SubmitPro.UseVisualStyleBackColor = false;
@@ -343,30 +336,30 @@
             // 
             // tb_ProRowNum
             // 
-            this.tb_ProRowNum.Location = new System.Drawing.Point(67, 716);
-            this.tb_ProRowNum.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tb_ProRowNum.Location = new System.Drawing.Point(50, 573);
+            this.tb_ProRowNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_ProRowNum.Name = "tb_ProRowNum";
-            this.tb_ProRowNum.Size = new System.Drawing.Size(99, 25);
+            this.tb_ProRowNum.Size = new System.Drawing.Size(75, 21);
             this.tb_ProRowNum.TabIndex = 251;
             this.tb_ProRowNum.Text = "3";
             this.tb_ProRowNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_ProColumnNum
             // 
-            this.tb_ProColumnNum.Location = new System.Drawing.Point(67, 761);
-            this.tb_ProColumnNum.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.tb_ProColumnNum.Location = new System.Drawing.Point(50, 609);
+            this.tb_ProColumnNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_ProColumnNum.Name = "tb_ProColumnNum";
-            this.tb_ProColumnNum.Size = new System.Drawing.Size(99, 25);
+            this.tb_ProColumnNum.Size = new System.Drawing.Size(75, 21);
             this.tb_ProColumnNum.TabIndex = 252;
             this.tb_ProColumnNum.Text = "4";
             this.tb_ProColumnNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Teach1
             // 
-            this.btn_Teach1.Location = new System.Drawing.Point(19, 648);
-            this.btn_Teach1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_Teach1.Location = new System.Drawing.Point(14, 518);
+            this.btn_Teach1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Teach1.Name = "btn_Teach1";
-            this.btn_Teach1.Size = new System.Drawing.Size(132, 58);
+            this.btn_Teach1.Size = new System.Drawing.Size(99, 46);
             this.btn_Teach1.TabIndex = 250;
             this.btn_Teach1.Text = "示教单个点";
             this.btn_Teach1.UseVisualStyleBackColor = true;
@@ -374,10 +367,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(19, 585);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button1.Location = new System.Drawing.Point(14, 468);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 58);
+            this.button1.Size = new System.Drawing.Size(99, 46);
             this.button1.TabIndex = 249;
             this.button1.Text = "示教左上";
             this.button1.UseVisualStyleBackColor = true;
@@ -394,11 +387,11 @@
             this.sxj,
             this.model1});
             this.dgv_ProPoints1.ContextMenuStrip = this.ProPointsMenu1;
-            this.dgv_ProPoints1.Location = new System.Drawing.Point(11, 6);
-            this.dgv_ProPoints1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dgv_ProPoints1.Location = new System.Drawing.Point(8, 5);
+            this.dgv_ProPoints1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_ProPoints1.Name = "dgv_ProPoints1";
             this.dgv_ProPoints1.RowTemplate.Height = 27;
-            this.dgv_ProPoints1.Size = new System.Drawing.Size(632, 574);
+            this.dgv_ProPoints1.Size = new System.Drawing.Size(474, 459);
             this.dgv_ProPoints1.TabIndex = 247;
             this.dgv_ProPoints1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CellMouseDown);
             // 
@@ -436,42 +429,42 @@
             this.toolStripSeparator2,
             this.tsm_DeletePoint});
             this.ProPointsMenu1.Name = "ProPointsMenu";
-            this.ProPointsMenu1.Size = new System.Drawing.Size(161, 136);
+            this.ProPointsMenu1.Size = new System.Drawing.Size(139, 112);
             // 
             // tsm_GoPoint
             // 
             this.tsm_GoPoint.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.tsm_GoPoint.Name = "tsm_GoPoint";
-            this.tsm_GoPoint.Size = new System.Drawing.Size(160, 30);
+            this.tsm_GoPoint.Size = new System.Drawing.Size(138, 24);
             this.tsm_GoPoint.Text = "执行运动";
             this.tsm_GoPoint.Click += new System.EventHandler(this.GoPoint_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(135, 6);
             // 
             // tsm_SaveAllPoint
             // 
             this.tsm_SaveAllPoint.Name = "tsm_SaveAllPoint";
-            this.tsm_SaveAllPoint.Size = new System.Drawing.Size(160, 30);
+            this.tsm_SaveAllPoint.Size = new System.Drawing.Size(138, 24);
             this.tsm_SaveAllPoint.Text = "全部保存";
             // 
             // tsm_ExportData
             // 
             this.tsm_ExportData.Name = "tsm_ExportData";
-            this.tsm_ExportData.Size = new System.Drawing.Size(160, 30);
+            this.tsm_ExportData.Size = new System.Drawing.Size(138, 24);
             this.tsm_ExportData.Text = "导出数据";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(135, 6);
             // 
             // tsm_DeletePoint
             // 
             this.tsm_DeletePoint.Name = "tsm_DeletePoint";
-            this.tsm_DeletePoint.Size = new System.Drawing.Size(160, 30);
+            this.tsm_DeletePoint.Size = new System.Drawing.Size(138, 24);
             this.tsm_DeletePoint.Text = "删除点位";
             this.tsm_DeletePoint.Click += new System.EventHandler(this.DeleteOnePoint);
             // 
@@ -496,11 +489,10 @@
             this.tabPage2.Controls.Add(this.btn_Teach2);
             this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.dgv_ProPoints2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(656, 959);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(490, 764);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "下相机检测";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -510,10 +502,10 @@
             this.btn_FlagSet2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_FlagSet2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_FlagSet2.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_FlagSet2.Location = new System.Drawing.Point(484, 722);
-            this.btn_FlagSet2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_FlagSet2.Location = new System.Drawing.Point(363, 578);
+            this.btn_FlagSet2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_FlagSet2.Name = "btn_FlagSet2";
-            this.btn_FlagSet2.Size = new System.Drawing.Size(137, 49);
+            this.btn_FlagSet2.Size = new System.Drawing.Size(103, 39);
             this.btn_FlagSet2.TabIndex = 273;
             this.btn_FlagSet2.Text = "标志设定";
             this.btn_FlagSet2.UseVisualStyleBackColor = false;
@@ -522,39 +514,37 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(204, 768);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(153, 614);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 15);
+            this.label8.Size = new System.Drawing.Size(65, 12);
             this.label8.TabIndex = 271;
             this.label8.Text = "检测列距：";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(204, 722);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(153, 578);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 15);
+            this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 272;
             this.label9.Text = "检测行距：";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(317, 718);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.textBox5.Location = new System.Drawing.Point(238, 574);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 25);
+            this.textBox5.Size = new System.Drawing.Size(103, 21);
             this.textBox5.TabIndex = 269;
             this.textBox5.Text = "12.5";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(317, 764);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.textBox6.Location = new System.Drawing.Point(238, 611);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(136, 25);
+            this.textBox6.Size = new System.Drawing.Size(103, 21);
             this.textBox6.TabIndex = 270;
             this.textBox6.Text = "21";
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -562,20 +552,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 718);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 574);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 268;
             this.label3.Text = "行数：";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 764);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(12, 611);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 15);
+            this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 267;
             this.label4.Text = "列数：";
             // 
@@ -584,10 +572,10 @@
             this.btn_save2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_save2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save2.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_save2.Location = new System.Drawing.Point(317, 645);
-            this.btn_save2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_save2.Location = new System.Drawing.Point(238, 516);
+            this.btn_save2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_save2.Name = "btn_save2";
-            this.btn_save2.Size = new System.Drawing.Size(137, 49);
+            this.btn_save2.Size = new System.Drawing.Size(103, 39);
             this.btn_save2.TabIndex = 254;
             this.btn_save2.Text = "保存";
             this.btn_save2.UseVisualStyleBackColor = false;
@@ -602,10 +590,10 @@
             this.cb_SelectProModel2.Items.AddRange(new object[] {
             "前载台下相机模板",
             "后载台下相机模板"});
-            this.cb_SelectProModel2.Location = new System.Drawing.Point(467, 645);
-            this.cb_SelectProModel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.cb_SelectProModel2.Location = new System.Drawing.Point(350, 516);
+            this.cb_SelectProModel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_SelectProModel2.Name = "cb_SelectProModel2";
-            this.cb_SelectProModel2.Size = new System.Drawing.Size(153, 28);
+            this.cb_SelectProModel2.Size = new System.Drawing.Size(116, 24);
             this.cb_SelectProModel2.TabIndex = 265;
             this.cb_SelectProModel2.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
             // 
@@ -614,10 +602,10 @@
             this.btn_ClearPro2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_ClearPro2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ClearPro2.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_ClearPro2.Location = new System.Drawing.Point(317, 589);
-            this.btn_ClearPro2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_ClearPro2.Location = new System.Drawing.Point(238, 471);
+            this.btn_ClearPro2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ClearPro2.Name = "btn_ClearPro2";
-            this.btn_ClearPro2.Size = new System.Drawing.Size(137, 51);
+            this.btn_ClearPro2.Size = new System.Drawing.Size(103, 41);
             this.btn_ClearPro2.TabIndex = 252;
             this.btn_ClearPro2.Text = "全部清除";
             this.btn_ClearPro2.UseVisualStyleBackColor = false;
@@ -625,20 +613,19 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(8, 799);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.richTextBox1.Location = new System.Drawing.Point(6, 639);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(633, 146);
+            this.richTextBox1.Size = new System.Drawing.Size(476, 118);
             this.richTextBox1.TabIndex = 258;
             this.richTextBox1.Text = "";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(464, 611);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(348, 489);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 266;
             this.label1.Text = "当前模板：";
             // 
@@ -647,10 +634,10 @@
             this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("宋体", 12F);
-            this.button4.Location = new System.Drawing.Point(160, 652);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button4.Location = new System.Drawing.Point(120, 522);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 49);
+            this.button4.Size = new System.Drawing.Size(100, 39);
             this.button4.TabIndex = 264;
             this.button4.Text = "执行运动";
             this.button4.UseVisualStyleBackColor = false;
@@ -660,40 +647,40 @@
             this.button6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("宋体", 12F);
-            this.button6.Location = new System.Drawing.Point(161, 584);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button6.Location = new System.Drawing.Point(121, 467);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(132, 51);
+            this.button6.Size = new System.Drawing.Size(99, 41);
             this.button6.TabIndex = 263;
             this.button6.Text = "提交生成";
             this.button6.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 714);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.textBox1.Location = new System.Drawing.Point(59, 571);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 25);
+            this.textBox1.Size = new System.Drawing.Size(75, 21);
             this.textBox1.TabIndex = 261;
             this.textBox1.Text = "3";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 759);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.textBox2.Location = new System.Drawing.Point(59, 607);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(99, 25);
+            this.textBox2.Size = new System.Drawing.Size(75, 21);
             this.textBox2.TabIndex = 262;
             this.textBox2.Text = "4";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Teach2
             // 
-            this.btn_Teach2.Location = new System.Drawing.Point(23, 645);
-            this.btn_Teach2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_Teach2.Location = new System.Drawing.Point(17, 516);
+            this.btn_Teach2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Teach2.Name = "btn_Teach2";
-            this.btn_Teach2.Size = new System.Drawing.Size(132, 58);
+            this.btn_Teach2.Size = new System.Drawing.Size(99, 46);
             this.btn_Teach2.TabIndex = 260;
             this.btn_Teach2.Text = "示教单个点";
             this.btn_Teach2.UseVisualStyleBackColor = true;
@@ -701,10 +688,10 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(23, 582);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button8.Location = new System.Drawing.Point(17, 466);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(132, 58);
+            this.button8.Size = new System.Drawing.Size(99, 46);
             this.button8.TabIndex = 259;
             this.button8.Text = "示教左下";
             this.button8.UseVisualStyleBackColor = true;
@@ -721,11 +708,11 @@
             this.xxj,
             this.model2});
             this.dgv_ProPoints2.ContextMenuStrip = this.ProPointsMenu2;
-            this.dgv_ProPoints2.Location = new System.Drawing.Point(8, 6);
-            this.dgv_ProPoints2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dgv_ProPoints2.Location = new System.Drawing.Point(6, 5);
+            this.dgv_ProPoints2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_ProPoints2.Name = "dgv_ProPoints2";
             this.dgv_ProPoints2.RowTemplate.Height = 27;
-            this.dgv_ProPoints2.Size = new System.Drawing.Size(635, 571);
+            this.dgv_ProPoints2.Size = new System.Drawing.Size(476, 457);
             this.dgv_ProPoints2.TabIndex = 257;
             this.dgv_ProPoints2.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CellMouseDown);
             // 
@@ -763,42 +750,42 @@
             this.toolStripSeparator4,
             this.toolStripMenuItem4});
             this.ProPointsMenu2.Name = "ProPointsMenu";
-            this.ProPointsMenu2.Size = new System.Drawing.Size(161, 136);
+            this.ProPointsMenu2.Size = new System.Drawing.Size(139, 112);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.toolStripMenuItem1.Text = "执行运动";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.GoPoint_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(135, 6);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(138, 24);
             this.toolStripMenuItem2.Text = "全部保存";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(138, 24);
             this.toolStripMenuItem3.Text = "导出数据";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(135, 6);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(138, 24);
             this.toolStripMenuItem4.Text = "删除点位";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.DeleteOnePoint);
             // 
@@ -820,10 +807,9 @@
             this.tabPage3.Controls.Add(this.btn_Teach3);
             this.tabPage3.Controls.Add(this.button14);
             this.tabPage3.Controls.Add(this.dgv_ProPoints3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(656, 959);
+            this.tabPage3.Size = new System.Drawing.Size(490, 764);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "重贴检测";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -833,10 +819,10 @@
             this.btn_FlagSet3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_FlagSet3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_FlagSet3.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_FlagSet3.Location = new System.Drawing.Point(449, 658);
-            this.btn_FlagSet3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_FlagSet3.Location = new System.Drawing.Point(337, 526);
+            this.btn_FlagSet3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_FlagSet3.Name = "btn_FlagSet3";
-            this.btn_FlagSet3.Size = new System.Drawing.Size(137, 49);
+            this.btn_FlagSet3.Size = new System.Drawing.Size(103, 39);
             this.btn_FlagSet3.TabIndex = 272;
             this.btn_FlagSet3.Text = "标志设定";
             this.btn_FlagSet3.UseVisualStyleBackColor = false;
@@ -847,10 +833,10 @@
             this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("宋体", 12F);
-            this.button2.Location = new System.Drawing.Point(463, 594);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button2.Location = new System.Drawing.Point(337, 475);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 51);
+            this.button2.Size = new System.Drawing.Size(103, 41);
             this.button2.TabIndex = 271;
             this.button2.Text = "检测上下差";
             this.button2.UseVisualStyleBackColor = false;
@@ -859,29 +845,27 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 728);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(6, 582);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 270;
             this.label6.Text = "行数：";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 774);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(6, 619);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 15);
+            this.label7.Size = new System.Drawing.Size(41, 12);
             this.label7.TabIndex = 269;
             this.label7.Text = "列数：";
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(11, 812);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.richTextBox2.Location = new System.Drawing.Point(8, 650);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(539, 134);
+            this.richTextBox2.Size = new System.Drawing.Size(405, 108);
             this.richTextBox2.TabIndex = 258;
             this.richTextBox2.Text = "";
             // 
@@ -894,20 +878,19 @@
             this.cb_SelectProModel3.Items.AddRange(new object[] {
             "前载台探高模板",
             "后载台探高模板"});
-            this.cb_SelectProModel3.Location = new System.Drawing.Point(220, 769);
-            this.cb_SelectProModel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.cb_SelectProModel3.Location = new System.Drawing.Point(165, 615);
+            this.cb_SelectProModel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_SelectProModel3.Name = "cb_SelectProModel3";
-            this.cb_SelectProModel3.Size = new System.Drawing.Size(191, 28);
+            this.cb_SelectProModel3.Size = new System.Drawing.Size(144, 24);
             this.cb_SelectProModel3.TabIndex = 267;
             this.cb_SelectProModel3.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(217, 735);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(163, 588);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 268;
             this.label2.Text = "当前模板：";
             // 
@@ -916,10 +899,10 @@
             this.btn_save3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_save3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save3.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_save3.Location = new System.Drawing.Point(304, 662);
-            this.btn_save3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_save3.Location = new System.Drawing.Point(228, 530);
+            this.btn_save3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_save3.Name = "btn_save3";
-            this.btn_save3.Size = new System.Drawing.Size(137, 49);
+            this.btn_save3.Size = new System.Drawing.Size(103, 39);
             this.btn_save3.TabIndex = 266;
             this.btn_save3.Text = "保存";
             this.btn_save3.UseVisualStyleBackColor = false;
@@ -930,10 +913,10 @@
             this.button10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.Font = new System.Drawing.Font("宋体", 12F);
-            this.button10.Location = new System.Drawing.Point(157, 662);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button10.Location = new System.Drawing.Point(118, 530);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(133, 49);
+            this.button10.Size = new System.Drawing.Size(100, 39);
             this.button10.TabIndex = 265;
             this.button10.Text = "执行运动";
             this.button10.UseVisualStyleBackColor = false;
@@ -943,10 +926,10 @@
             this.btn_ClearPro3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_ClearPro3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ClearPro3.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_ClearPro3.Location = new System.Drawing.Point(304, 594);
-            this.btn_ClearPro3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_ClearPro3.Location = new System.Drawing.Point(228, 475);
+            this.btn_ClearPro3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ClearPro3.Name = "btn_ClearPro3";
-            this.btn_ClearPro3.Size = new System.Drawing.Size(137, 51);
+            this.btn_ClearPro3.Size = new System.Drawing.Size(103, 41);
             this.btn_ClearPro3.TabIndex = 264;
             this.btn_ClearPro3.Text = "全部清除";
             this.btn_ClearPro3.UseVisualStyleBackColor = false;
@@ -957,10 +940,10 @@
             this.button12.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button12.Font = new System.Drawing.Font("宋体", 12F);
-            this.button12.Location = new System.Drawing.Point(159, 594);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button12.Location = new System.Drawing.Point(119, 475);
+            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(132, 51);
+            this.button12.Size = new System.Drawing.Size(99, 41);
             this.button12.TabIndex = 263;
             this.button12.Text = "提交生成";
             this.button12.UseVisualStyleBackColor = false;
@@ -968,30 +951,30 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(67, 724);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.textBox3.Location = new System.Drawing.Point(50, 579);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(99, 25);
+            this.textBox3.Size = new System.Drawing.Size(75, 21);
             this.textBox3.TabIndex = 261;
             this.textBox3.Text = "3";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(67, 769);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.textBox4.Location = new System.Drawing.Point(50, 615);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(99, 25);
+            this.textBox4.Size = new System.Drawing.Size(75, 21);
             this.textBox4.TabIndex = 262;
             this.textBox4.Text = "4";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Teach3
             // 
-            this.btn_Teach3.Location = new System.Drawing.Point(11, 655);
-            this.btn_Teach3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_Teach3.Location = new System.Drawing.Point(8, 524);
+            this.btn_Teach3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Teach3.Name = "btn_Teach3";
-            this.btn_Teach3.Size = new System.Drawing.Size(132, 58);
+            this.btn_Teach3.Size = new System.Drawing.Size(99, 46);
             this.btn_Teach3.TabIndex = 260;
             this.btn_Teach3.Text = "示教单个点";
             this.btn_Teach3.UseVisualStyleBackColor = true;
@@ -999,13 +982,14 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(11, 592);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button14.Location = new System.Drawing.Point(8, 474);
+            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(132, 58);
+            this.button14.Size = new System.Drawing.Size(99, 46);
             this.button14.TabIndex = 259;
-            this.button14.Text = "示教左下";
+            this.button14.Text = "示教右下";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // dgv_ProPoints3
             // 
@@ -1019,11 +1003,11 @@
             this.xtg,
             this.model3});
             this.dgv_ProPoints3.ContextMenuStrip = this.ProPointsMenu3;
-            this.dgv_ProPoints3.Location = new System.Drawing.Point(4, 2);
-            this.dgv_ProPoints3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dgv_ProPoints3.Location = new System.Drawing.Point(3, 2);
+            this.dgv_ProPoints3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_ProPoints3.Name = "dgv_ProPoints3";
             this.dgv_ProPoints3.RowTemplate.Height = 27;
-            this.dgv_ProPoints3.Size = new System.Drawing.Size(645, 586);
+            this.dgv_ProPoints3.Size = new System.Drawing.Size(484, 469);
             this.dgv_ProPoints3.TabIndex = 257;
             this.dgv_ProPoints3.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CellMouseDown);
             // 
@@ -1066,52 +1050,51 @@
             this.toolStripSeparator6,
             this.toolStripMenuItem8});
             this.ProPointsMenu3.Name = "ProPointsMenu";
-            this.ProPointsMenu3.Size = new System.Drawing.Size(161, 136);
+            this.ProPointsMenu3.Size = new System.Drawing.Size(139, 112);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(138, 24);
             this.toolStripMenuItem5.Text = "执行运动";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.GoPoint_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(135, 6);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(138, 24);
             this.toolStripMenuItem6.Text = "全部保存";
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(138, 24);
             this.toolStripMenuItem7.Text = "导出数据";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(135, 6);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(138, 24);
             this.toolStripMenuItem8.Text = "删除点位";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.DeleteOnePoint);
             // 
             // CheckPointSet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 988);
+            this.ClientSize = new System.Drawing.Size(498, 790);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CheckPointSet";
             this.Text = "CheckPointSet";
             this.tabControl1.ResumeLayout(false);
