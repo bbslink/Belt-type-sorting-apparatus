@@ -17,7 +17,7 @@ namespace Belt_type_sorting_apparatus
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
-           // Application.Run(new VisionPointSet(1));
+            //Application.Run(new CorrectTool());
 
         }
     }

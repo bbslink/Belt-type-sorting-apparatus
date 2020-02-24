@@ -692,5 +692,10 @@ namespace Belt_type_sorting_apparatus
         public static string tcpAsk1 = "MS";
         #endregion
 
+
+        public static double pix_mm = 11;
+        public static double mm_pulse_x = 12;
+        public static double mm_pulse_y = 12;
+
     }
 }

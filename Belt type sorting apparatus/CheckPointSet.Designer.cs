@@ -121,6 +121,7 @@
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button11 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ProPoints1)).BeginInit();
@@ -147,6 +148,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button11);
             this.tabPage1.Controls.Add(this.btn_FlagSet1);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.label29);
@@ -168,7 +170,7 @@
             this.tabPage1.Controls.Add(this.dgv_ProPoints1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(490, 764);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "上相机检测";
@@ -179,7 +181,7 @@
             this.btn_FlagSet1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_FlagSet1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_FlagSet1.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_FlagSet1.Location = new System.Drawing.Point(339, 572);
+            this.btn_FlagSet1.Location = new System.Drawing.Point(339, 534);
             this.btn_FlagSet1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_FlagSet1.Name = "btn_FlagSet1";
             this.btn_FlagSet1.Size = new System.Drawing.Size(103, 39);
@@ -253,7 +255,7 @@
             this.cb_SelectProModel1.Items.AddRange(new object[] {
             "前载台上相机模板",
             "后载台上相机模板"});
-            this.cb_SelectProModel1.Location = new System.Drawing.Point(337, 518);
+            this.cb_SelectProModel1.Location = new System.Drawing.Point(337, 506);
             this.cb_SelectProModel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_SelectProModel1.Name = "cb_SelectProModel1";
             this.cb_SelectProModel1.Size = new System.Drawing.Size(144, 24);
@@ -263,7 +265,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 485);
+            this.label5.Location = new System.Drawing.Point(337, 473);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 258;
@@ -491,7 +493,7 @@
             this.tabPage2.Controls.Add(this.dgv_ProPoints2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(490, 764);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "下相机检测";
@@ -1089,6 +1091,21 @@
             this.toolStripMenuItem8.Text = "删除点位";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.DeleteOnePoint);
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button11.Location = new System.Drawing.Point(339, 575);
+            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(106, 55);
+            this.button11.TabIndex = 294;
+            this.button11.Text = "一键中心对齐";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // CheckPointSet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1208,5 +1225,6 @@
         private System.Windows.Forms.Button btn_FlagSet1;
         private System.Windows.Forms.Button btn_FlagSet2;
         private System.Windows.Forms.Button btn_FlagSet3;
+        private System.Windows.Forms.Button button11;
     }
 }

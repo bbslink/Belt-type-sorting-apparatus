@@ -18,12 +18,15 @@ namespace Belt_type_sorting_apparatus.CommonClass
             get { return modelName; }
             set { modelName = value; }
         }
+
         ArrayList modelPoints;//工作点位
         public ArrayList ModelPoints
         {
             get { return modelPoints; }
             set { modelPoints = value; }
         }
+
+      
 
         double standMacth = 19;
         public double StandMacth

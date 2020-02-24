@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -188,6 +189,14 @@ namespace Belt_type_sorting_apparatus.CommonClass
         //产品模板
         public Dictionary<string, PointControl> PointModels = new Dictionary<string, PointControl>();
 
+        public ArrayList standPoints = new ArrayList();//产品点位
+        public ArrayList StandPoints
+        {
+            get { return standPoints; }
+            set { standPoints = value; }
+        }
+        //检测标识
+        public Dictionary<string, FlagTextBox> StandFlag = new Dictionary<string, FlagTextBox>();
 
         public double pre_Score = 0.6;
         public double product_Score = 0.85;

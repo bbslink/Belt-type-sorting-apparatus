@@ -20,6 +20,7 @@ namespace Belt_type_sorting_apparatus
         System.Windows.Forms.Timer timerup_acq = new System.Windows.Forms.Timer();
         System.Windows.Forms.Timer timerdown_acq = new System.Windows.Forms.Timer();
         string errMsg;
+        public static HTuple displayHandle;
         int temp1 = 0, temp2 = 0;
         public VisionSetting()
         {
@@ -49,6 +50,11 @@ namespace Belt_type_sorting_apparatus
             modelsControl1.SetModelSavePathEnable(false);
             modelsControl1.LoadModels(out errMsg);
             modelsControl1.SetCameraPoseParam(Application.StartupPath + "\\inner.cal", Application.StartupPath + "\\outer.dat", out errMsg);
+
+            dispControl2.GetWindowHandle(out displayHandle, out errMsg);
+            //CommonData.camAControl = dispControlA;
+            //CommonData.camBControl = dispControlB;
+            //displayHandle
         }
 
  

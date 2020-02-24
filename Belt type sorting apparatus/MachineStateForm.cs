@@ -630,5 +630,7 @@ namespace Belt_type_sorting_apparatus
             CheckPointSet ch = new CheckPointSet();
             ch.Show();
         }
+
+       
     }
 }

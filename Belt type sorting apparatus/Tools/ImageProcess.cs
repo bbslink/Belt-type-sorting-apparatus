@@ -209,6 +209,9 @@ namespace Belt_type_sorting_apparatus.CommonClass
                              }
                         }
                         break;
+                    case 3:
+
+                        break;
                     default:
                         break;
 

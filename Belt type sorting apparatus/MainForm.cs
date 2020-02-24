@@ -220,12 +220,7 @@ namespace Belt_type_sorting_apparatus
             try
             {
                 timera.Stop();
-                timer1.Stop();
-                timer2.Stop();
-                timer3.Stop();
-                timer4.Stop();
-                timer5.Stop();
-                timer6.Stop();
+              
                 if (CommonData.signal_SysInitOK == true)
                 {
                     //关闭所有线程
@@ -303,12 +298,7 @@ namespace Belt_type_sorting_apparatus
                 //开始急停线程
                 threadControls.ReInitThread(1);
 
-                timer1.Start();
-                timer2.Start();
-                timer3.Start();
-                timer4.Start();
-                timer5.Start();
-                timer6.Start();
+               
             }
             catch(Exception ex)
             {
@@ -378,12 +368,7 @@ namespace Belt_type_sorting_apparatus
                         throw new Exception("系统已经运行，不要重复按！");
 
                     Thread.Sleep(10);
-                    timer1.Start();
-                    timer2.Start();
-                    timer3.Start();
-                    timer4.Start();
-                    timer5.Start();
-                    timer6.Start();
+                 
                    
                     threadControls.ReInitThread(5);
 
@@ -411,12 +396,7 @@ namespace Belt_type_sorting_apparatus
                     }
                     StopAction.ErrStop();
                 }
-                timer1.Stop();
-                timer2.Stop();
-                timer3.Stop();
-                timer4.Stop();
-                timer5.Stop();
-                timer6.Stop();
+               
             }
             catch(Exception ex)
             {
@@ -636,165 +616,6 @@ namespace Belt_type_sorting_apparatus
             CommonData.saveData.deltaAngel = Convert.ToDouble(textBox4.Text);
         }
 
-      
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (CommonData.signal_SysInitOK)
-            {
-                if (CommonData.signal_IsStartNow)
-                {
-                    viewPort1.Controls.Clear();
-                    CommonData.flagController1.Invoke(new Action(() =>
-                    {
-                        foreach (TextBox temp in CommonData.flagController1.Controls)
-                        {
-                            TextBox temp1 = new TextBox();
-                            temp1.Size = temp.Size;
-                            temp1.Text = temp.Text;
-                            temp1.BackColor = temp.BackColor;
-                            temp1.Left = temp.Left;
-                            temp1.Top = temp.Top;
-                            temp1.TextAlign = temp.TextAlign;
-                            temp1.Enabled = false;
-                            viewPort1.Controls.Add(temp1);
-                        }
-                    }));
-                }
-            }
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            if (CommonData.signal_SysInitOK)
-            {
-                if (CommonData.signal_IsStartNow)
-                {
-                    viewPort2.Controls.Clear();
-                    CommonData.flagController2.Invoke(new Action(() =>
-                    {
-                        foreach (TextBox temp in CommonData.flagController2.Controls)
-                        {
-                            TextBox temp1 = new TextBox();
-                            temp1.Size = temp.Size;
-                            temp1.Text = temp.Text;
-                            temp1.BackColor = temp.BackColor;
-                            temp1.Left = temp.Left;
-                            temp1.Top = temp.Top;
-                            temp1.TextAlign = temp.TextAlign;
-                            temp1.Enabled = false;
-                            viewPort2.Controls.Add(temp1);
-                        }
-                    }));
-                }
-            }
-        }
-
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-            if (CommonData.signal_SysInitOK)
-            {
-                if (CommonData.signal_IsStartNow)
-                {
-                    viewPort3.Controls.Clear();
-                    CommonData.flagController3.Invoke(new Action(() =>
-                    {
-                        foreach (TextBox temp in CommonData.flagController3.Controls)
-                        {
-                            TextBox temp1 = new TextBox();
-                            temp1.Size = temp.Size;
-                            temp1.Text = temp.Text;
-                            temp1.BackColor = temp.BackColor;
-                            temp1.Left = temp.Left;
-                            temp1.Top = temp.Top;
-                            temp1.TextAlign = temp.TextAlign;
-                            temp1.Enabled = false;
-                            viewPort3.Controls.Add(temp1);
-                        }
-                    }));
-                }
-            }
-        }
-
-        private void timer4_Tick(object sender, EventArgs e)
-        {
-            if (CommonData.signal_SysInitOK)
-            {
-                if (CommonData.signal_IsStartNow)
-                {
-                    viewPort4.Controls.Clear();
-                    CommonData.flagController4.Invoke(new Action(() =>
-                    {
-                        foreach (TextBox temp in CommonData.flagController4.Controls)
-                        {
-                            TextBox temp1 = new TextBox();
-                            temp1.Size = temp.Size;
-                            temp1.Text = temp.Text;
-                            temp1.BackColor = temp.BackColor;
-                            temp1.Left = temp.Left;
-                            temp1.Top = temp.Top;
-                            temp1.TextAlign = temp.TextAlign;
-                            temp1.Enabled = false;
-                            viewPort4.Controls.Add(temp1);
-                        }
-                    }));
-                }
-            }
-        }
-
-        private void timer5_Tick(object sender, EventArgs e)
-        {
-            if (CommonData.signal_SysInitOK)
-            {
-                if (CommonData.signal_IsStartNow)
-                {
-                    viewPort5.Controls.Clear();
-                    CommonData.flagController5.Invoke(new Action(() =>
-                    {
-                        foreach (TextBox temp in CommonData.flagController5.Controls)
-                        {
-                            TextBox temp1 = new TextBox();
-                            temp1.Size = temp.Size;
-                            temp1.Text = temp.Text;
-                            temp1.BackColor = temp.BackColor;
-                            temp1.Left = temp.Left;
-                            temp1.Top = temp.Top;
-                            temp1.TextAlign = temp.TextAlign;
-                            temp1.Enabled = false;
-                            viewPort5.Controls.Add(temp1);
-                        }
-                    }));
-                }
-            }
-        }
-
-        private void timer6_Tick(object sender, EventArgs e)
-        {
-            if (CommonData.signal_SysInitOK)
-            {
-                if (CommonData.signal_IsStartNow)
-                {
-                    viewPort6.Controls.Clear();
-                    CommonData.flagController6.Invoke(new Action(() =>
-                    {
-                        foreach (TextBox temp in CommonData.flagController6.Controls)
-                        {
-                            TextBox temp1 = new TextBox();
-                            temp1.Size = temp.Size;
-                            temp1.Text = temp.Text;
-                            temp1.BackColor = temp.BackColor;
-                            temp1.Left = temp.Left;
-                            temp1.Top = temp.Top;
-                            temp1.TextAlign = temp.TextAlign;
-                            temp1.Enabled = false;
-                            viewPort6.Controls.Add(temp1);
-                        }
-                    }));
-                }
-            }
-        }
-
-      
-
-        
+       
     }
 }

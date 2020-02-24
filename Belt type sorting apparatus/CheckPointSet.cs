@@ -1,4 +1,6 @@
 ﻿using Belt_type_sorting_apparatus.CommonClass;
+using HalconDotNet;
+using SXTisCam;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,6 +30,7 @@ namespace Belt_type_sorting_apparatus
         int curDepthDelta_X = 0;
         int curDepthDelta_Y = 0;
         int curSelectData = -1;
+        string errMsg;
         public CheckPointSet()
         {
             InitializeComponent();
@@ -530,7 +533,7 @@ namespace Belt_type_sorting_apparatus
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
             if (cb_SelectProModel1.SelectedIndex == 0)
             {
                 curX_1 = CardControl.AxisNowPosition(CommonData.axisProductReceive_Front);
@@ -660,6 +663,12 @@ namespace Belt_type_sorting_apparatus
                 return;
             }
 
+            if (curX_1 == 0 && curY_1 == 0)
+            {
+                MessageBox.Show("没有示教点");
+                return;
+            }
+
             if (MessageBox.Show("是否以当前位置为基准生成模板的【" + cb_SelectProModel1.Text + "】检测坐标？", "询问", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
             {
                 return;
@@ -678,9 +687,9 @@ namespace Belt_type_sorting_apparatus
                 }
             }
 
+            int curCount = dgv_ProPoints1.Rows.Count;//当前已有点位数量
 
             int curX2;
-
             if (cb_SelectProModel1.SelectedIndex == 0)
             {
                 curX2 = CardControl.AxisNowPosition(CommonData.axisProductReceive_Front);
@@ -692,77 +701,90 @@ namespace Belt_type_sorting_apparatus
 
             int curY2 = CardControl.AxisNowPosition(CommonData.axisCameraUp);
 
-            double rowDis = Convert.ToDouble(tb_ProRowDis.Text);
-            double columnDis = Convert.ToDouble(tb_ProColumnDis.Text);
-            int rowNum = Convert.ToInt32(tb_ProRowNum.Text);
-            int columnNum = Convert.ToInt32(tb_ProColumnNum.Text);
+ 
+           
 
-            int curCount = dgv_ProPoints1.Rows.Count;//当前已有点位数量
-            int[] xPoints = new int[columnNum];
-            int[] yPoints = new int[rowNum];
-            double[,] results = new double[columnNum * rowNum, 2];
+            //////////////////////////标准///////////////////////////////////////////
 
+            //double rowDis = Convert.ToDouble(tb_ProRowDis.Text);
+            //double columnDis = Convert.ToDouble(tb_ProColumnDis.Text);
+            //int rowNum = Convert.ToInt32(tb_ProRowNum.Text);
+            //int columnNum = Convert.ToInt32(tb_ProColumnNum.Text);
 
-            if (curX_1 == 0 && curY_1 == 0)
-            {
-                MessageBox.Show("没有示教点");
-                return;
-            }
+           
+            //int[] xPoints = new int[columnNum];
+            //int[] yPoints = new int[rowNum];
+            //double[,] results = new double[columnNum * rowNum, 2];
 
 
-            double detangle;
-            //int xcommon = (int)(curX2 + columnDis * (columnNum - 1) * 1000);       
-            int xcommon = (int)(curX2 - columnDis * (columnNum - 1) * 1000);
-            int ycommon = (int)(curY2 + rowDis * (rowNum - 1) * 1000);
-            double angcommon = Math.Atan2(ycommon - curY2, xcommon - curX2);
-            detangle = Math.Atan2(curY_1 - curY2, curX_1 - curX2) - angcommon;
+            //double detangle;
+            ////int xcommon = (int)(curX2 + columnDis * (columnNum - 1) * 1000);       
+            //int xcommon = (int)(curX2 - columnDis * (columnNum - 1) * 1000);
+            //int ycommon = (int)(curY2 + rowDis * (rowNum - 1) * 1000);
+            //double angcommon = Math.Atan2(ycommon - curY2, xcommon - curX2);
+            //detangle = Math.Atan2(curY_1 - curY2, curX_1 - curX2) - angcommon;
 
+            ////for (int xi = 0; xi < columnNum; xi++)
+            ////{
+            ////    xPoints[xi] = (int)(curX2 + xi * columnDis * 1000);  
+            ////}
             //for (int xi = 0; xi < columnNum; xi++)
             //{
-            //    xPoints[xi] = (int)(curX2 + xi * columnDis * 1000);  
+            //    xPoints[xi] = (int)(curX2 - xi * columnDis * 1000);
             //}
-            for (int xi = 0; xi < columnNum; xi++)
-            {
-                xPoints[xi] = (int)(curX2 - xi * columnDis * 1000);
-            }
-            for (int yi = 0; yi < rowNum; yi++)
-            {
-                yPoints[yi] = (int)(curY2 + yi * rowDis * 1000);
-            }
+            //for (int yi = 0; yi < rowNum; yi++)
+            //{
+            //    yPoints[yi] = (int)(curY2 + yi * rowDis * 1000);
+            //}
 
 
-            int curIndex = 0;//当前行序号
+            //int curIndex = 0;//当前行序号
 
-            for (int i = 0; i < columnNum; i++)
+            //for (int i = 0; i < columnNum; i++)
+            //{
+            //    if (curIndex == 0) //从低到高
+            //    {
+            //        for (int j = 0; j < rowNum; j++)
+            //        {
+            //            double s = Math.Atan2(yPoints[j] - curY2, xPoints[i] - curX2) + detangle;
+            //            double q = Math.Sqrt(Math.Pow((yPoints[j] - curY2), 2) + Math.Pow((xPoints[i] - curX2), 2));
+            //            int thisX = (int)(curX2 + q * Math.Cos(s));
+            //            int thisY = (int)(curY2 + q * Math.Sin(s));            
+            //            string[] curData = new string[] { (i * rowNum + j + curCount).ToString(), thisX.ToString(), thisY.ToString(), cb_SelectProModel1.Text };
+            //            dgv_ProPoints1.Rows.Add(curData);
+            //            curIndex = j;
+            //        }
+            //    }
+            //    else if (curIndex == rowNum - 1)//从高到低
+            //    {
+            //        for (int j = rowNum - 1; j >= 0; j--)
+            //        {
+            //            double s = Math.Atan2(yPoints[j] - curY2, xPoints[i] - curX2) + detangle;
+            //            double q = Math.Sqrt(Math.Pow((yPoints[j] - curY2), 2) + Math.Pow((xPoints[i] - curX2), 2));
+            //            int thisX = (int)(curX2 + q * Math.Cos(s));
+            //            int thisY = (int)(curY2 + q * Math.Sin(s));
+            //            string[] curData = new string[] { (i * rowNum + (rowNum - j - 1) + curCount).ToString(), thisX.ToString(), thisY.ToString(), cb_SelectProModel1.Text };
+            //            dgv_ProPoints1.Rows.Add(curData);
+            //            curIndex = j;
+            //        }
+            //    }
+            //}
+            /////////////////////////test//////////////////////////////////////////
+            double detangle_up;
+            double angcommon = 0;
+            detangle_up = Math.Atan2(curY_1 - curY2, curX_1 - curX2) - angcommon;
+            int i = 0;
+            foreach (var curKV in CommonData.saveData.standPoints)
             {
-                if (curIndex == 0) //从低到高
-                {
-                    for (int j = 0; j < rowNum; j++)
-                    {
-                        double s = Math.Atan2(yPoints[j] - curY2, xPoints[i] - curX2) + detangle;
-                        double q = Math.Sqrt(Math.Pow((yPoints[j] - curY2), 2) + Math.Pow((xPoints[i] - curX2), 2));
-                        int thisX = (int)(curX2 + q * Math.Cos(s));
-                        int thisY = (int)(curY2 + q * Math.Sin(s));            
-                        string[] curData = new string[] { (i * rowNum + j + curCount).ToString(), thisX.ToString(), thisY.ToString(), cb_SelectProModel1.Text };
-                        dgv_ProPoints1.Rows.Add(curData);
-                        curIndex = j;
-                    }
-                }
-                else if (curIndex == rowNum - 1)//从高到低
-                {
-                    for (int j = rowNum - 1; j >= 0; j--)
-                    {
-                        double s = Math.Atan2(yPoints[j] - curY2, xPoints[i] - curX2) + detangle;
-                        double q = Math.Sqrt(Math.Pow((yPoints[j] - curY2), 2) + Math.Pow((xPoints[i] - curX2), 2));
-                        int thisX = (int)(curX2 + q * Math.Cos(s));
-                        int thisY = (int)(curY2 + q * Math.Sin(s));
-                        string[] curData = new string[] { (i * rowNum + (rowNum - j - 1) + curCount).ToString(), thisX.ToString(), thisY.ToString(), cb_SelectProModel1.Text };
-                        dgv_ProPoints1.Rows.Add(curData);
-                        curIndex = j;
-                    }
-                }
+                string[] curArray = curKV.ToString().Split(' ');
+                double s = Math.Atan2(Convert.ToInt32(curArray[1]) - curY2, Convert.ToInt32(curArray[0]) - curX2) + detangle_up;
+                double q = Math.Sqrt(Math.Pow((Convert.ToInt32(curArray[1]) - curY2), 2) + Math.Pow((Convert.ToInt32(curArray[0]) - curX2), 2));
+                int thisX = (int)(curX2 + q * Math.Cos(s));
+                int thisY = (int)(curY2 + q * Math.Sin(s));
+                string[] curData = new string[] { (i + curCount).ToString(), thisX.ToString(), thisY.ToString(), cb_SelectProModel1.Text };
+                dgv_ProPoints1.Rows.Add(curData);
+                i++;
             }
-            /////////////////////////test
 
 
         }
@@ -1245,6 +1267,55 @@ namespace Belt_type_sorting_apparatus
                 return;
             }
           
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (cb_SelectProModel1.SelectedIndex < 0)
+            {
+                MessageBox.Show("请选择模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            CommonData.CameraUp.PostFrameEvent += new TisCamera.PostFrameEventHandler(TestImage);
+            CommonData.signal_CameraNowPlace = 3;
+            CommonData.CameraUp.SnapShot(out errMsg);
+        }
+
+        private void TestImage(HObject grabImage)
+        {
+            if (VisionSetting.displayHandle != null)
+            {
+
+
+
+                HTuple CheckRow1, CheckColumn1, CheckAngle1, CheckScore1;
+                bool isok = SXModelsControl.ShapeModelUtil.FindShapeModelsIdx(grabImage, CommonData.ModelIDs, 0,
+                    CommonData.ModelRegions[0], VisionSetting.displayHandle, 0, 360, CommonData.saveData.pre_Score, 1, 4, 0.5, out CheckRow1, out CheckColumn1, out CheckAngle1, out CheckScore1, out errMsg);
+                if (!isok || CheckRow1.Length <= 0 || CheckRow1 == null)
+                {
+                    MessageBox.Show("模板匹配失败！无法计算！");
+                }
+                else
+                {
+                    int go_x = (int)((CheckColumn1.D - 1928) * CommonData.pix_mm * CommonData.mm_pulse_x);
+                    int go_y = (int)((CheckRow1.D - 1382) * CommonData.pix_mm * CommonData.mm_pulse_y);
+                    if (cb_SelectProModel1.SelectedIndex == 0)
+                    {
+                        CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Front, CommonData.axisCameraUp }, new int[] { go_x, go_y }, new ushort[] { 0, 0 });
+                    }
+                    else
+                    {
+                        CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Behind, CommonData.axisCameraUp }, new int[] { go_x, go_y }, new ushort[] { 0, 0 });
+                    }
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("请打开视觉窗口查看！");
+            }
+            CommonData.CameraUp.PostFrameEvent -= new TisCamera.PostFrameEventHandler(TestImage);
         }
     }
 }
