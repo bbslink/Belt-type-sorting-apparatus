@@ -119,6 +119,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Utils Last Version\SXDispControl.dll</HintPath>
     </Reference>
+    <Reference Include="SXDxf">
+      <HintPath>..\Utils Last Version\SXDxf.dll</HintPath>
+    </Reference>
     <Reference Include="SXHeghoLig">
       <HintPath>..\Utils Last Version\SXHeghoLig.dll</HintPath>
     </Reference>
@@ -211,6 +214,12 @@
     </Compile>
     <Compile Include="DataSetVision.Designer.cs">
       <DependentUpon>DataSetVision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DxfControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DxfControl.Designer.cs">
+      <DependentUpon>DxfControl.cs</DependentUpon>
     </Compile>
     <Compile Include="FlagView.cs">
       <SubType>Form</SubType>
@@ -320,12 +329,6 @@
     <Compile Include="ParaSetVision.Designer.cs">
       <DependentUpon>ParaSetVision.cs</DependentUpon>
     </Compile>
-    <Compile Include="PointSet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PointSet.designer.cs">
-      <DependentUpon>PointSet.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProductSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -363,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataSetVision.resx">
       <DependentUpon>DataSetVision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DxfControl.resx">
+      <DependentUpon>DxfControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FlagView.resx">
       <DependentUpon>FlagView.cs</DependentUpon>
@@ -402,9 +408,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ParaSetVision.resx">
       <DependentUpon>ParaSetVision.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PointSet.resx">
-      <DependentUpon>PointSet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductSet.resx">
       <DependentUpon>ProductSet.cs</DependentUpon>

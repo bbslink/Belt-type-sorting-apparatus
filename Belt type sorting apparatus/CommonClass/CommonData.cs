@@ -52,6 +52,7 @@ namespace Belt_type_sorting_apparatus
         //初当前生产产品参数保存路径
         public static string CurProPath;//文件保存路径
         public static string CurProFile;//产品信息文件路径
+        public static string CurProDxf;
         //INI配置文件参数路径
         public static string sysSetPath = Application.StartupPath + "\\set.ini";
         //数据库文件路径

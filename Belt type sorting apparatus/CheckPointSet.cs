@@ -701,8 +701,14 @@ namespace Belt_type_sorting_apparatus
 
             int curY2 = CardControl.AxisNowPosition(CommonData.axisCameraUp);
 
- 
-           
+            //标准坐标生成
+            CommonData.saveData.standPoints.Clear();
+            for (int iss = 0; iss < CommonData.saveData.ho_StrightDist.Count; iss++)
+            {
+                string tempcur = ((int)(curX2 + CommonData.saveData.ho_ColDist[iss] * CommonData.mm_pulse_x)) + " " + ((int)(curY2 + CommonData.saveData.ho_RowDist[iss] * CommonData.mm_pulse_y));
+                CommonData.saveData.standPoints.Add(tempcur);
+            }
+                 
 
             //////////////////////////标准///////////////////////////////////////////
 
@@ -1284,38 +1290,167 @@ namespace Belt_type_sorting_apparatus
 
         private void TestImage(HObject grabImage)
         {
-            if (VisionSetting.displayHandle != null)
+            try
             {
-
-
-
-                HTuple CheckRow1, CheckColumn1, CheckAngle1, CheckScore1;
-                bool isok = SXModelsControl.ShapeModelUtil.FindShapeModelsIdx(grabImage, CommonData.ModelIDs, 0,
-                    CommonData.ModelRegions[0], VisionSetting.displayHandle, 0, 360, CommonData.saveData.pre_Score, 1, 4, 0.5, out CheckRow1, out CheckColumn1, out CheckAngle1, out CheckScore1, out errMsg);
-                if (!isok || CheckRow1.Length <= 0 || CheckRow1 == null)
+                if (VisionSetting.displayHandle != null)
                 {
-                    MessageBox.Show("模板匹配失败！无法计算！");
-                }
-                else
-                {
-                    int go_x = (int)((CheckColumn1.D - 1928) * CommonData.pix_mm * CommonData.mm_pulse_x);
-                    int go_y = (int)((CheckRow1.D - 1382) * CommonData.pix_mm * CommonData.mm_pulse_y);
-                    if (cb_SelectProModel1.SelectedIndex == 0)
+                    HTuple CheckRow1, CheckColumn1, CheckAngle1, CheckScore1;
+                    bool isok = SXModelsControl.ShapeModelUtil.FindShapeModelsIdx(grabImage, CommonData.ModelIDs, 0,
+                        CommonData.ModelRegions[0], VisionSetting.displayHandle, 0, 360, CommonData.saveData.pre_Score, 1, 4, 0.5, out CheckRow1, out CheckColumn1, out CheckAngle1, out CheckScore1, out errMsg);
+                    if (!isok || CheckRow1.Length <= 0 || CheckRow1 == null)
                     {
-                        CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Front, CommonData.axisCameraUp }, new int[] { go_x, go_y }, new ushort[] { 0, 0 });
+                        MessageBox.Show("模板匹配失败！无法计算！");
                     }
                     else
                     {
-                        CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Behind, CommonData.axisCameraUp }, new int[] { go_x, go_y }, new ushort[] { 0, 0 });
-                    }
+                        int go_x = (int)((CheckColumn1.D - 1928) * CommonData.pix_mm * CommonData.mm_pulse_x);
+                        int go_y = (int)((CheckRow1.D - 1382) * CommonData.pix_mm * CommonData.mm_pulse_y);
+                        if (cb_SelectProModel1.SelectedIndex == 0)
+                        {
+                            CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Front, CommonData.axisCameraUp }, new int[] { go_x, go_y }, new ushort[] { 0, 0 });
+                        }
+                        else
+                        {
+                            CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Behind, CommonData.axisCameraUp }, new int[] { go_x, go_y }, new ushort[] { 0, 0 });
+                        }
 
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("请打开视觉窗口查看！");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("视觉配置有误！");
+            }
+            finally
+            {
+                CommonData.CameraUp.PostFrameEvent -= new TisCamera.PostFrameEventHandler(TestImage);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (cb_SelectProModel1.SelectedIndex < 0)
+            {
+                MessageBox.Show("请选择模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (cb_SelectProModel1.SelectedIndex == 0)
+            {
+                CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Front, CommonData.axisCameraUp }, new int[] { CommonData.saveData.FrontReceiveDis[2], CommonData.saveData.UpCameraDis[1] }, new ushort[] { 1, 1 });
+               
+            }
+            else
+            {
+                CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Behind, CommonData.axisCameraUp }, new int[] { CommonData.saveData.BehindReceiveDis[2], CommonData.saveData.UpCameraDis[3] }, new ushort[] { 1, 1 });
+            }
+           
+        }
+
+        private void button54_Click(object sender, EventArgs e)
+        {
+            if (cb_SelectProModel1.SelectedIndex < 0)
+            {
+                MessageBox.Show("请选择模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (cb_SelectProModel1.SelectedIndex == 0)
+            {
+                
+                DialogResult result = MessageBox.Show("是否重新示教【上相机前Mark1】？\r" + "当前前载台值为" + CommonData.saveData.FrontReceiveDis[2] +
+                 "\r当前上相机值为" + CommonData.saveData.UpCameraDis[1], "警告", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    CommonData.saveData.FrontReceiveDis[2] = CardControl.AxisNowPosition(CommonData.axisProductReceive_Front);
+                    CommonData.saveData.UpCameraDis[1] = CardControl.AxisNowPosition(CommonData.axisCameraUp);
+                    MessageBox.Show("修改成功！\r" + "当前前载台值为" + CommonData.saveData.FrontReceiveDis[2] +
+                    "\r当前上相机值为" + CommonData.saveData.UpCameraDis[1], "请重启程序保存！");
                 }
             }
             else
             {
-                MessageBox.Show("请打开视觉窗口查看！");
+                DialogResult result = MessageBox.Show("是否重新示教【上相机后Mark1】？\r" + "当前后载台值为" + CommonData.saveData.BehindReceiveDis[2] +
+                  "\r当前上相机值为" + CommonData.saveData.UpCameraDis[3], "警告", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    CommonData.saveData.BehindReceiveDis[2] = CardControl.AxisNowPosition(CommonData.axisProductReceive_Behind);
+                    CommonData.saveData.UpCameraDis[3] = CardControl.AxisNowPosition(CommonData.axisCameraUp);
+                    MessageBox.Show("修改成功！\r" + "当前后载台值为" + CommonData.saveData.BehindReceiveDis[2] +
+                    "\r当前上相机值为" + CommonData.saveData.UpCameraDis[3], "请重启程序保存！");
+                }
             }
-            CommonData.CameraUp.PostFrameEvent -= new TisCamera.PostFrameEventHandler(TestImage);
+         
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (cb_SelectProModel1.SelectedIndex < 0)
+            {
+                MessageBox.Show("请选择模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (cb_SelectProModel1.SelectedIndex == 0)
+            {
+                CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Front, CommonData.axisCameraUp }, new int[] { CommonData.saveData.FrontReceiveDis[3], CommonData.saveData.UpCameraDis[2] }, new ushort[] { 1, 1 });
+
+            }
+            else
+            {
+                CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Behind, CommonData.axisCameraUp }, new int[] { CommonData.saveData.BehindReceiveDis[3], CommonData.saveData.UpCameraDis[4] }, new ushort[] { 1, 1 });
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (cb_SelectProModel1.SelectedIndex < 0)
+            {
+                MessageBox.Show("请选择模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (cb_SelectProModel1.SelectedIndex == 0)
+            {
+
+                DialogResult result = MessageBox.Show("是否重新示教【上相机前Mark2】？\r" + "当前前载台值为" + CommonData.saveData.FrontReceiveDis[3] +
+                 "\r当前上相机值为" + CommonData.saveData.UpCameraDis[2], "警告", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    CommonData.saveData.FrontReceiveDis[3] = CardControl.AxisNowPosition(CommonData.axisProductReceive_Front);
+                    CommonData.saveData.UpCameraDis[2] = CardControl.AxisNowPosition(CommonData.axisCameraUp);
+                    MessageBox.Show("修改成功！\r" + "当前前载台值为" + CommonData.saveData.FrontReceiveDis[3] +
+                    "\r当前上相机值为" + CommonData.saveData.UpCameraDis[2], "请重启程序保存！");
+                }
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("是否重新示教【上相机后Mark1】？\r" + "当前后载台值为" + CommonData.saveData.BehindReceiveDis[3] +
+                  "\r当前上相机值为" + CommonData.saveData.UpCameraDis[4], "警告", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    CommonData.saveData.BehindReceiveDis[3] = CardControl.AxisNowPosition(CommonData.axisProductReceive_Behind);
+                    CommonData.saveData.UpCameraDis[4] = CardControl.AxisNowPosition(CommonData.axisCameraUp);
+                    MessageBox.Show("修改成功！\r" + "当前后载台值为" + CommonData.saveData.BehindReceiveDis[3] +
+                    "\r当前上相机值为" + CommonData.saveData.UpCameraDis[4], "请重启程序保存！");
+                }
+            }
         }
     }
 }

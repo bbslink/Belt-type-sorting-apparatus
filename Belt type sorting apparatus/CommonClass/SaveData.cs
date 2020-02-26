@@ -167,13 +167,13 @@ namespace Belt_type_sorting_apparatus.CommonClass
 
 
         /// <summary>
-        /// 前载台运动位置 1：接料位置 2：检测位置 3：探高位置  4 出料位   
+        /// 前载台运动位置 1：接料位置 2：上Mark1 3：上Mark2  4：出料位   5：下Mark1 6：下Mark2
         /// </summary>
-        public int[] FrontReceiveDis = { 0, 0, 0, 0 ,789648};
+        public int[] FrontReceiveDis = { 0, 0, 0, 0 ,789648,0,0};
         /// <summary>
-        /// 后载台运动位置 1：接料位置 2：检测位置 3：探高位置  4 出料位  
+        /// 后载台运动位置 1：接料位置 2：Mark1 3：mark2  4 出料位   5：下Mark1 6：下Mark2
         /// </summary>
-        public int[] BehindReceiveDis = { 0, 0, 0, 0 ,793730};
+        public int[] BehindReceiveDis = { 0, 0, 0, 0 ,793730,0,0};
         /// <summary>
         /// 进料轴运动位置  1：取料位置 2：前放置位 3后放置位
         /// </summary>
@@ -186,15 +186,19 @@ namespace Belt_type_sorting_apparatus.CommonClass
         public int[] UpDepthDis = { 0, 98424 };
         public int[] DownDepthDis = { 0, 143678 };
 
+        /// <summary>
+        /// 上相机运动位置  1：前Mark1  2：前Mark2 3:后Mark1  4:后Mark2
+        /// </summary>
+        public int[] UpCameraDis = { 0, 143678,999,999,999 };
+        /// <summary>
+        /// 下相机运动位置  1：前Mark1  2：前Mark2 3:后Mark1  4:后Mark2
+        /// </summary>
+        public int[] DownCameraDis = { 0, 143678,999,999,999};
         //产品模板
         public Dictionary<string, PointControl> PointModels = new Dictionary<string, PointControl>();
 
         public ArrayList standPoints = new ArrayList();//产品点位
-        public ArrayList StandPoints
-        {
-            get { return standPoints; }
-            set { standPoints = value; }
-        }
+       
         //检测标识
         public Dictionary<string, FlagTextBox> StandFlag = new Dictionary<string, FlagTextBox>();
 
@@ -237,6 +241,12 @@ namespace Belt_type_sorting_apparatus.CommonClass
         public int delay_CommonTime = 60000;
         public int delay_PuffTime = 50;
         public int delay_MannulHomeTime = 10000;
+
+        public List<double> ho_RowList;
+        public List<double> ho_ColList;
+        public List<double> ho_RowDist;
+        public List<double> ho_ColDist;
+        public List<double> ho_StrightDist;
     }
 
     

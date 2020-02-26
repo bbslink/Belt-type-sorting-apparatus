@@ -1,5 +1,6 @@
 ﻿using Belt_type_sorting_apparatus.CommonClass;
 using HalconDotNet;
+using SXDxf;
 using SXHikCam;
 using SXOptCam;
 using SXTisCam;
@@ -35,9 +36,14 @@ namespace Belt_type_sorting_apparatus
                     Directory.CreateDirectory(CommonData.CurProPath);
 
                 CommonData.CurProFile = CommonData.CurProPath + "\\" + CommonData.CurProName + ".nb";
+                CommonData.CurProDxf = CommonData.CurProPath + "\\" + "dxffiles";
+             
+                if (!Directory.Exists(CommonData.CurProDxf))
+                    Directory.CreateDirectory(CommonData.CurProDxf);           
 
                 //实例化运行参数实例
                 object file = FileHandle.AntiSerializeFile(CommonData.CurProFile);
+                
                 if (file != null)
                     CommonData.saveData = (SaveData)file;
                 else
@@ -45,6 +51,24 @@ namespace Belt_type_sorting_apparatus
                     CommonData.saveData = new SaveData();
                     sysEvent.showRealInfo("系统运动配置文件丢失，恢复至默认参数", CommonData.infoMess);
                 }
+
+                //加载Dxf文件
+                if (CommonData.saveData.ho_RowList == null|| CommonData.saveData.ho_RowList.Count==0)
+                {
+                    if(!ReadDxf.ReadDxfCoordinate(CommonData.CurProDxf, out CommonData.saveData.ho_RowList, out CommonData.saveData.ho_ColList, out errMsg))
+                        sysEvent.showRealInfo("Dxf文件配置失败，原因："+ errMsg + "请重新导入Dxf文件！", CommonData.warnMess);
+                }
+                if (CommonData.saveData.ho_RowDist == null || CommonData.saveData.ho_RowDist.Count == 0)
+                {
+                    if(!ReadDxf.ReadDistOrder(CommonData.CurProDxf, out CommonData.saveData.ho_RowDist, out CommonData.saveData.ho_ColDist, out CommonData.saveData.ho_StrightDist, out errMsg))
+                        sysEvent.showRealInfo("Dxf文件配置失败，原因：" + errMsg + "请重新配置Dxf文件！", CommonData.warnMess);
+                    
+                }
+              //  ReadDxf.CalcPosDist(CommonData.saveData.ho_RowList, CommonData.saveData.ho_ColList, 0, out CommonData.saveData.ho_RowDist, out CommonData.saveData.ho_ColDist, out CommonData.saveData.ho_StrightDist, out errMsg);
+               // int[] ss = new int[] { CommonData.saveData.BehindReceiveDis[0], CommonData.saveData.BehindReceiveDis[1],
+               // CommonData.saveData.BehindReceiveDis[2], CommonData.saveData.BehindReceiveDis[3], CommonData.saveData.BehindReceiveDis[4],
+               //0, 0};
+               // CommonData.saveData.BehindReceiveDis = ss;
 
                 //初始所有模板
                 if (!CommonData.saveData.PointModels.ContainsKey("前载台上相机模板"))
@@ -78,7 +102,7 @@ namespace Belt_type_sorting_apparatus
                     CommonData.saveData.PointModels.Add("后载台探高模板", new PointControl());
                 }
 
-
+               
                 //加载数据库
                 if (!File.Exists(CommonData.FilePath))
                 {

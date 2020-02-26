@@ -154,43 +154,7 @@ namespace Belt_type_sorting_apparatus
             }
         }
 
-        private void button49_Click(object sender, EventArgs e)
-        {
-            CardControl.AxisMoveAndCheck(CommonData.axisProductReceive_Front, CommonData.saveData.FrontReceiveDis[2], 1, CommonData.saveData.delay_CommonTime);
-        }
 
-        private void button48_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("是否重新示教【前检测位上】？\r" + "当前值为" + CommonData.saveData.FrontReceiveDis[2], "警告", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
-            {
-                return;
-            }
-            else
-            {
-                CommonData.saveData.FrontReceiveDis[2] = CardControl.AxisNowPosition(CommonData.axisProductReceive_Front);
-                MessageBox.Show("修改成功！\r" + "当前值为" + CommonData.saveData.FrontReceiveDis[2], "请重启程序保存！");
-            }
-        }
-
-        private void button24_Click(object sender, EventArgs e)
-        {
-            CardControl.AxisMoveAndCheck(CommonData.axisProductReceive_Front, CommonData.saveData.FrontReceiveDis[3], 1, CommonData.saveData.delay_CommonTime);
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("是否重新示教【前探高位】？\r" + "当前值为" + CommonData.saveData.FrontReceiveDis[3], "警告", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
-            {
-                return;
-            }
-            else
-            {
-                CommonData.saveData.FrontReceiveDis[3] = CardControl.AxisNowPosition(CommonData.axisProductReceive_Front);
-                MessageBox.Show("修改成功！\r" + "当前值为" + CommonData.saveData.FrontReceiveDis[3], "请重启程序保存！");
-            }
-        }
 
         private void button53_Click(object sender, EventArgs e)
         {
@@ -230,43 +194,7 @@ namespace Belt_type_sorting_apparatus
             }
         }
 
-        private void button59_Click(object sender, EventArgs e)
-        {
-            CardControl.AxisMoveAndCheck(CommonData.axisProductReceive_Behind, CommonData.saveData.BehindReceiveDis[2], 1, CommonData.saveData.delay_CommonTime);
-        }
-
-        private void button58_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("是否重新示教【后检测位上】？\r" + "当前值为" + CommonData.saveData.BehindReceiveDis[2], "警告", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
-            {
-                return;
-            }
-            else
-            {
-                CommonData.saveData.BehindReceiveDis[2] = CardControl.AxisNowPosition(CommonData.axisProductReceive_Behind);
-                MessageBox.Show("修改成功！\r" + "当前值为" + CommonData.saveData.BehindReceiveDis[2], "请重启程序保存！");
-            }
-        }
-
-        private void button57_Click(object sender, EventArgs e)
-        {
-            CardControl.AxisMoveAndCheck(CommonData.axisProductReceive_Behind, CommonData.saveData.BehindReceiveDis[3], 1, CommonData.saveData.delay_CommonTime);
-        }
-
-        private void button56_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("是否重新示教【后探高位】？\r" + "当前值为" + CommonData.saveData.BehindReceiveDis[3], "警告", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
-            {
-                return;
-            }
-            else
-            {
-                CommonData.saveData.BehindReceiveDis[3] = CardControl.AxisNowPosition(CommonData.axisProductReceive_Behind);
-                MessageBox.Show("修改成功！\r" + "当前值为" + CommonData.saveData.BehindReceiveDis[3], "请重启程序保存！");
-            }
-        }
+        
 
         private void button55_Click(object sender, EventArgs e)
         {

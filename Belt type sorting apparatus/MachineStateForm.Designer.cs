@@ -460,11 +460,11 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(357, -4);
+            this.button9.Location = new System.Drawing.Point(345, 219);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(47, 23);
+            this.button9.Size = new System.Drawing.Size(59, 23);
             this.button9.TabIndex = 264;
-            this.button9.Text = "button9";
+            this.button9.Text = "对齐";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -571,9 +571,9 @@
             // 
             this.button42.BackColor = System.Drawing.Color.PowderBlue;
             this.button42.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Bold);
-            this.button42.Location = new System.Drawing.Point(345, 162);
+            this.button42.Location = new System.Drawing.Point(342, 164);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(70, 61);
+            this.button42.Size = new System.Drawing.Size(70, 49);
             this.button42.TabIndex = 256;
             this.button42.Text = "下探高回原";
             this.button42.UseVisualStyleBackColor = false;
@@ -1123,7 +1123,7 @@
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 929F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 930F));
             this.tableLayoutPanel6.Controls.Add(this.P1Out0, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.label250, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label251, 0, 11);
@@ -1603,7 +1603,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 924F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 925F));
             this.tableLayoutPanel3.Controls.Add(this.label49, 2, 13);
             this.tableLayoutPanel3.Controls.Add(this.label50, 2, 12);
             this.tableLayoutPanel3.Controls.Add(this.label53, 0, 11);
