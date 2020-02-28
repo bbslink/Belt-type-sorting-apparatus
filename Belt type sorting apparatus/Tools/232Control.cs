@@ -90,7 +90,7 @@ namespace GroupDemo.CommonClass
                     CheckSignal.WaitForALLTime(() => in_state != null);
                     if (in_state.Length != 32)
                         throw new Exception();
-                }
+                }          
 
                 if (in_state.Length != 32)
                     throw new Exception();

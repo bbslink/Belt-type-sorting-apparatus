@@ -219,7 +219,7 @@ namespace Belt_type_sorting_apparatus
                     return false;
                 }
 
-                for (int i = 0; i < dgv_ProPoints1.Rows.Count; i++)
+                for (int i = 0; i < dgv_ProPoints1.Rows.Count; i++)   
                 {
                     foreach (DataGridViewCell columnItem in dgv_ProPoints1.Rows[i].Cells)
                     {
@@ -306,7 +306,7 @@ namespace Belt_type_sorting_apparatus
                         //{
                         //    CurUpCameraFrontModelClass.ModelPoints.Clear();
                         //}
-
+                         
                         for (int idx = 0; idx < dgv_ProPoints1.Rows.Count; idx++)
                         {
                             string curPointStr = dgv_ProPoints1.Rows[idx].Cells[1].Value.ToString() + " " + dgv_ProPoints1.Rows[idx].Cells[2].Value.ToString();
@@ -332,9 +332,9 @@ namespace Belt_type_sorting_apparatus
                         {
                             string curPointStr = dgv_ProPoints1.Rows[idx].Cells[1].Value.ToString() + " " + dgv_ProPoints1.Rows[idx].Cells[2].Value.ToString();
                             CurUpCameraBehindModelClass.ModelPoints.Add(curPointStr);
-                        }
+                        }  
                     }
-                    else
+                    else 
                     {
                         MessageBox.Show("请选择要配置的模板！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -970,7 +970,7 @@ namespace Belt_type_sorting_apparatus
             {
                 if (e.Button == MouseButtons.Right)
                 {
-                    if (e.RowIndex >= 0)
+                    if (e.RowIndex >= 0) 
                     {
                         dgv_selectRowIndex = e.RowIndex;
                         curSelectData = 3;
@@ -993,7 +993,7 @@ namespace Belt_type_sorting_apparatus
                 {
                     return;
                 }
-            }
+            }  
             else if (temp.Name.Equals("cb_SelectProModel2"))
             {
                 if (cb_SelectProModel2.SelectedIndex == 0 || cb_SelectProModel2.SelectedIndex == 1)
