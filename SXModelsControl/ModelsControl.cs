@@ -177,6 +177,10 @@ namespace SXModelsControl
                 }
                 ArrayList allRois;
                 dispControl1.GetROIList(out allRois, out errMsg);
+                //if (!ModelControlUtil.SerializeROIFile(allRois, tb_SaveModelPath.Text + "\\" + cb_CurModels.Text + "\\ModelRegion.rois", out errMsg))
+                //{
+                //    MessageBox.Show("保存失败：" + errMsg);
+                //}
                 if (!ModelControlUtil.SerializeROIFile(allRois, tb_SaveModelPath.Text + "\\" + cb_CurModels.Text + "\\ModelRegion.rois", out errMsg))
                 {
                     MessageBox.Show("保存失败：" + errMsg);
@@ -191,6 +195,8 @@ namespace SXModelsControl
                 MessageBox.Show("异常！" + ex.Message, "提示");
             }
         }
+
+      
         private void btn_SaveModelPath_Click(object sender, EventArgs e)
         {
             try

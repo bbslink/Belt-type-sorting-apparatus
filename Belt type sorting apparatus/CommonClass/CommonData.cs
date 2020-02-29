@@ -694,9 +694,9 @@ namespace Belt_type_sorting_apparatus
         #endregion
 
 
-        public static double pix_mm = 11;
-        public static double mm_pulse_x = 12;
-        public static double mm_pulse_y = 12;
+        public static double pix_mm = 0.011513194;
+        public static double mm_pulse_x = 1006;
+        public static double mm_pulse_y = 1000;
 
     }
 }

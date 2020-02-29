@@ -99,7 +99,7 @@ namespace Belt_type_sorting_apparatus
                 {
                     return;
                 }
-
+ 
                 string[] curRow = new string[4];
                 for (int idx = 0; idx < CurDownCameraFrontModelClass.ModelPoints.Count; idx++)
                 {
@@ -517,8 +517,10 @@ namespace Belt_type_sorting_apparatus
             {
 
                 string[] curArray = curKV.ToString().Split(' ');
-
-                string[] curData = new string[] { (i + curCount).ToString(), curArray[0]+ curDepthDelta_X, curArray[1]+ curDepthDelta_Y, curArray[1] + curDepthDelta_Y+1844, cb_SelectProModel3.Text };
+                int temp_x = Convert.ToInt32(curArray[0]) + curDepthDelta_X;
+                int temp_y = Convert.ToInt32(curArray[1]) + curDepthDelta_Y;
+                int temp_y2 = temp_y + 1844;
+                string[] curData = new string[] { (i + curCount).ToString(), temp_x.ToString(), temp_y.ToString(), temp_y2.ToString(), cb_SelectProModel3.Text };
                 dgv_ProPoints3.Rows.Add(curData);
                 i++;
 
@@ -700,13 +702,26 @@ namespace Belt_type_sorting_apparatus
             }
 
             int curY2 = CardControl.AxisNowPosition(CommonData.axisCameraUp);
-
+            int sb = 7;
+            double angcommon = 0;
             //标准坐标生成
             CommonData.saveData.standPoints.Clear();
             for (int iss = 0; iss < CommonData.saveData.ho_StrightDist.Count; iss++)
             {
-                string tempcur = ((int)(curX2 + CommonData.saveData.ho_ColDist[iss] * CommonData.mm_pulse_x)) + " " + ((int)(curY2 + CommonData.saveData.ho_RowDist[iss] * CommonData.mm_pulse_y));
-                CommonData.saveData.standPoints.Add(tempcur);
+
+                if (iss == sb)
+                    break;
+                if (iss == 6)
+                {
+                    int mark_2_X_common = (int)(curX2 - CommonData.saveData.ho_ColDist[iss] * CommonData.mm_pulse_x);
+                    int mark_2_Y_common = (int)(curY2 + CommonData.saveData.ho_RowDist[iss] * CommonData.mm_pulse_y);
+                    angcommon = Math.Atan2(mark_2_Y_common - curY2, mark_2_X_common - curX2);
+                }
+                else
+                {
+                    string tempcur = ((int)(curX2 - CommonData.saveData.ho_ColDist[iss] * CommonData.mm_pulse_x)) + " " + ((int)(curY2 + CommonData.saveData.ho_RowDist[iss] * CommonData.mm_pulse_y));
+                    CommonData.saveData.standPoints.Add(tempcur);
+                }
             }
                  
 
@@ -777,7 +792,7 @@ namespace Belt_type_sorting_apparatus
             //}
             /////////////////////////test//////////////////////////////////////////
             double detangle_up;
-            double angcommon = 0;
+          
             detangle_up = Math.Atan2(curY_1 - curY2, curX_1 - curX2) - angcommon;
             int i = 0;
             foreach (var curKV in CommonData.saveData.standPoints)
@@ -1254,7 +1269,7 @@ namespace Belt_type_sorting_apparatus
         private void button14_Click(object sender, EventArgs e)
         {
             string[] curArray_front = CurUpCameraFrontModelClass.ModelPoints[0].ToString().Split(' ');
-            string[] curArray_behind = CurUpCameraBehindModelClass.ModelPoints[0].ToString().Split(' ');
+           
          
 
             if (cb_SelectProModel3.SelectedIndex == 0)
@@ -1264,6 +1279,7 @@ namespace Belt_type_sorting_apparatus
             }
             else if (cb_SelectProModel3.SelectedIndex == 1)
             {
+                string[] curArray_behind = CurUpCameraBehindModelClass.ModelPoints[0].ToString().Split(' ');
                 curDepthDelta_Y = CardControl.AxisNowPosition(CommonData.axisProductReceive_Behind) - Convert.ToInt32(curArray_behind[0]);
                 curDepthDelta_Y = CardControl.AxisNowPosition(CommonData.axisUpDepth_CheckMove) - Convert.ToInt32(curArray_behind[1]);
             }
@@ -1307,11 +1323,11 @@ namespace Belt_type_sorting_apparatus
                         int go_y = (int)((CheckRow1.D - 1382) * CommonData.pix_mm * CommonData.mm_pulse_y);
                         if (cb_SelectProModel1.SelectedIndex == 0)
                         {
-                            CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Front, CommonData.axisCameraUp }, new int[] { go_x, go_y }, new ushort[] { 0, 0 });
+                            CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Front, CommonData.axisCameraUp }, new int[] { -go_x, go_y }, new ushort[] { 0, 0 });
                         }
                         else
                         {
-                            CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Behind, CommonData.axisCameraUp }, new int[] { go_x, go_y }, new ushort[] { 0, 0 });
+                            CardControl.AxissMoveAndCheck(new ushort[] { CommonData.axisProductReceive_Behind, CommonData.axisCameraUp }, new int[] { -go_x, go_y }, new ushort[] { 0, 0 });
                         }
 
                     }

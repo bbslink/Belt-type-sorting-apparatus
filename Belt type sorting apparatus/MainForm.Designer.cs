@@ -90,7 +90,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dispControlB = new SXDispControl.DispControl();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCompanyLog)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -537,7 +536,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.tb_CurProduct);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
@@ -709,16 +707,6 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "下检测相机";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1029, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -825,7 +813,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         public SXDispControl.DispControl dispControlB;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button button2;
     }
 }
 

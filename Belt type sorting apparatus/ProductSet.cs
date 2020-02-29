@@ -134,5 +134,17 @@ namespace Belt_type_sorting_apparatus
                 QueryProNames();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DxfControl s = new DxfControl();
+            s.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DxfControl s = new DxfControl();
+            s.Show();
+        }
     }
 }

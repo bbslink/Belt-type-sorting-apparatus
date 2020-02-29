@@ -75,6 +75,7 @@
             this.btn_SaveData = new System.Windows.Forms.Button();
             this.tb_ModelsNoOrder = new System.Windows.Forms.ListBox();
             this.dispControl1 = new SXDispControl.DispControl();
+            this.btn_SaveROI = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -123,10 +124,10 @@
             this.tabPage2.Controls.Add(this.tb_NewModel);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(322, 531);
+            this.tabPage2.Size = new System.Drawing.Size(322, 535);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "创建模板";
             // 
@@ -135,7 +136,7 @@
             this.tb_SaveModelPath.Location = new System.Drawing.Point(115, 17);
             this.tb_SaveModelPath.Name = "tb_SaveModelPath";
             this.tb_SaveModelPath.ReadOnly = true;
-            this.tb_SaveModelPath.Size = new System.Drawing.Size(132, 27);
+            this.tb_SaveModelPath.Size = new System.Drawing.Size(132, 23);
             this.tb_SaveModelPath.TabIndex = 33;
             // 
             // btn_SaveModelPath
@@ -155,7 +156,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(16, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 17);
+            this.label4.Size = new System.Drawing.Size(77, 14);
             this.label4.TabIndex = 31;
             this.label4.Text = "模板路径：";
             // 
@@ -186,17 +187,16 @@
             // tb_AllModels
             // 
             this.tb_AllModels.FormattingEnabled = true;
-            this.tb_AllModels.ItemHeight = 17;
             this.tb_AllModels.Location = new System.Drawing.Point(17, 155);
             this.tb_AllModels.Name = "tb_AllModels";
-            this.tb_AllModels.Size = new System.Drawing.Size(290, 140);
+            this.tb_AllModels.Size = new System.Drawing.Size(290, 134);
             this.tb_AllModels.TabIndex = 2;
             // 
             // tb_NewModel
             // 
             this.tb_NewModel.Location = new System.Drawing.Point(17, 85);
             this.tb_NewModel.Name = "tb_NewModel";
-            this.tb_NewModel.Size = new System.Drawing.Size(290, 27);
+            this.tb_NewModel.Size = new System.Drawing.Size(290, 23);
             this.tb_NewModel.TabIndex = 1;
             // 
             // label12
@@ -204,7 +204,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(16, 126);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 17);
+            this.label12.Size = new System.Drawing.Size(77, 14);
             this.label12.TabIndex = 0;
             this.label12.Text = "所有模板：";
             // 
@@ -213,13 +213,14 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(16, 58);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 17);
+            this.label11.Size = new System.Drawing.Size(91, 14);
             this.label11.TabIndex = 0;
             this.label11.Text = "新模板名称：";
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.btn_SaveROI);
             this.tabPage1.Controls.Add(this.cb_CurCamera);
             this.tabPage1.Controls.Add(this.btn_GoSaveData);
             this.tabPage1.Controls.Add(this.btn_SnapShot);
@@ -246,10 +247,10 @@
             this.tabPage1.Controls.Add(this.btn_TestModelLoad);
             this.tabPage1.Controls.Add(this.btn_CreateModel);
             this.tabPage1.Controls.Add(this.btn_MaskModel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(322, 531);
+            this.tabPage1.Size = new System.Drawing.Size(322, 535);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "模板参数";
             // 
@@ -259,7 +260,7 @@
             this.cb_CurCamera.FormattingEnabled = true;
             this.cb_CurCamera.Location = new System.Drawing.Point(146, 243);
             this.cb_CurCamera.Name = "cb_CurCamera";
-            this.cb_CurCamera.Size = new System.Drawing.Size(166, 25);
+            this.cb_CurCamera.Size = new System.Drawing.Size(166, 21);
             this.cb_CurCamera.TabIndex = 37;
             // 
             // btn_GoSaveData
@@ -300,7 +301,7 @@
             this.cb_CurModels.FormattingEnabled = true;
             this.cb_CurModels.Location = new System.Drawing.Point(146, 4);
             this.cb_CurModels.Name = "cb_CurModels";
-            this.cb_CurModels.Size = new System.Drawing.Size(166, 25);
+            this.cb_CurModels.Size = new System.Drawing.Size(166, 21);
             this.cb_CurModels.TabIndex = 34;
             this.cb_CurModels.SelectedIndexChanged += new System.EventHandler(this.cb_CurModels_SelectedIndexChanged);
             // 
@@ -313,7 +314,7 @@
             0,
             0});
             this.tb_NumLevel.Name = "tb_NumLevel";
-            this.tb_NumLevel.Size = new System.Drawing.Size(166, 27);
+            this.tb_NumLevel.Size = new System.Drawing.Size(166, 23);
             this.tb_NumLevel.TabIndex = 25;
             this.tb_NumLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -326,7 +327,7 @@
             0,
             0});
             this.tb_MatchNum.Name = "tb_MatchNum";
-            this.tb_MatchNum.Size = new System.Drawing.Size(166, 27);
+            this.tb_MatchNum.Size = new System.Drawing.Size(166, 23);
             this.tb_MatchNum.TabIndex = 25;
             this.tb_MatchNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_MatchNum.Value = new decimal(new int[] {
@@ -350,7 +351,7 @@
             0,
             0});
             this.tb_Greediness.Name = "tb_Greediness";
-            this.tb_Greediness.Size = new System.Drawing.Size(166, 27);
+            this.tb_Greediness.Size = new System.Drawing.Size(166, 23);
             this.tb_Greediness.TabIndex = 24;
             this.tb_Greediness.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Greediness.Value = new decimal(new int[] {
@@ -374,7 +375,7 @@
             0,
             0});
             this.tb_MinScore.Name = "tb_MinScore";
-            this.tb_MinScore.Size = new System.Drawing.Size(166, 27);
+            this.tb_MinScore.Size = new System.Drawing.Size(166, 23);
             this.tb_MinScore.TabIndex = 24;
             this.tb_MinScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_MinScore.Value = new decimal(new int[] {
@@ -392,7 +393,7 @@
             0,
             0});
             this.tb_MinThreshold.Name = "tb_MinThreshold";
-            this.tb_MinThreshold.Size = new System.Drawing.Size(166, 27);
+            this.tb_MinThreshold.Size = new System.Drawing.Size(166, 23);
             this.tb_MinThreshold.TabIndex = 23;
             this.tb_MinThreshold.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_MinThreshold.Value = new decimal(new int[] {
@@ -415,7 +416,7 @@
             0,
             -2147483648});
             this.tb_AngleExtent.Name = "tb_AngleExtent";
-            this.tb_AngleExtent.Size = new System.Drawing.Size(166, 27);
+            this.tb_AngleExtent.Size = new System.Drawing.Size(166, 23);
             this.tb_AngleExtent.TabIndex = 21;
             this.tb_AngleExtent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_AngleExtent.Value = new decimal(new int[] {
@@ -438,7 +439,7 @@
             0,
             -2147483648});
             this.tb_AngleStart.Name = "tb_AngleStart";
-            this.tb_AngleStart.Size = new System.Drawing.Size(166, 27);
+            this.tb_AngleStart.Size = new System.Drawing.Size(166, 23);
             this.tb_AngleStart.TabIndex = 22;
             this.tb_AngleStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -447,7 +448,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 186);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 17);
+            this.label6.Size = new System.Drawing.Size(63, 14);
             this.label6.TabIndex = 18;
             this.label6.Text = "金字塔：";
             // 
@@ -456,7 +457,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 158);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 17);
+            this.label5.Size = new System.Drawing.Size(63, 14);
             this.label5.TabIndex = 16;
             this.label5.Text = "贪婪度：";
             // 
@@ -465,7 +466,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(11, 246);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 17);
+            this.label7.Size = new System.Drawing.Size(77, 14);
             this.label7.TabIndex = 18;
             this.label7.Text = "相机列表：";
             // 
@@ -474,7 +475,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(11, 216);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 17);
+            this.label9.Size = new System.Drawing.Size(77, 14);
             this.label9.TabIndex = 18;
             this.label9.Text = "匹配数量：";
             // 
@@ -483,7 +484,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(13, 128);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 17);
+            this.label8.Size = new System.Drawing.Size(63, 14);
             this.label8.TabIndex = 16;
             this.label8.Text = "相似度：";
             // 
@@ -492,7 +493,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.Size = new System.Drawing.Size(77, 14);
             this.label3.TabIndex = 14;
             this.label3.Text = "最小色差：";
             // 
@@ -501,7 +502,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 17);
+            this.label2.Size = new System.Drawing.Size(77, 14);
             this.label2.TabIndex = 13;
             this.label2.Text = "角度范围：";
             // 
@@ -510,7 +511,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(13, 7);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 17);
+            this.label10.Size = new System.Drawing.Size(77, 14);
             this.label10.TabIndex = 12;
             this.label10.Text = "当前模板：";
             // 
@@ -519,7 +520,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(77, 14);
             this.label1.TabIndex = 12;
             this.label1.Text = "起始角度：";
             // 
@@ -529,7 +530,7 @@
             this.btn_SaveROIs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_SaveROIs.Location = new System.Drawing.Point(16, 282);
             this.btn_SaveROIs.Name = "btn_SaveROIs";
-            this.btn_SaveROIs.Size = new System.Drawing.Size(145, 45);
+            this.btn_SaveROIs.Size = new System.Drawing.Size(83, 45);
             this.btn_SaveROIs.TabIndex = 10;
             this.btn_SaveROIs.Text = "保存ROI";
             this.btn_SaveROIs.UseVisualStyleBackColor = false;
@@ -592,10 +593,10 @@
             this.tabPage3.Controls.Add(this.btn_ResetOrder);
             this.tabPage3.Controls.Add(this.btn_SaveData);
             this.tabPage3.Controls.Add(this.tb_ModelsNoOrder);
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(322, 531);
+            this.tabPage3.Size = new System.Drawing.Size(322, 535);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "模板顺序";
             // 
@@ -624,10 +625,9 @@
             // tb_ModelsOrder
             // 
             this.tb_ModelsOrder.FormattingEnabled = true;
-            this.tb_ModelsOrder.ItemHeight = 17;
             this.tb_ModelsOrder.Location = new System.Drawing.Point(4, 208);
             this.tb_ModelsOrder.Name = "tb_ModelsOrder";
-            this.tb_ModelsOrder.Size = new System.Drawing.Size(313, 140);
+            this.tb_ModelsOrder.Size = new System.Drawing.Size(313, 134);
             this.tb_ModelsOrder.TabIndex = 10;
             // 
             // btn_ResetOrder
@@ -657,10 +657,9 @@
             // tb_ModelsNoOrder
             // 
             this.tb_ModelsNoOrder.FormattingEnabled = true;
-            this.tb_ModelsNoOrder.ItemHeight = 17;
             this.tb_ModelsNoOrder.Location = new System.Drawing.Point(4, 6);
             this.tb_ModelsNoOrder.Name = "tb_ModelsNoOrder";
-            this.tb_ModelsNoOrder.Size = new System.Drawing.Size(313, 140);
+            this.tb_ModelsNoOrder.Size = new System.Drawing.Size(313, 134);
             this.tb_ModelsNoOrder.TabIndex = 0;
             // 
             // dispControl1
@@ -668,13 +667,26 @@
             this.dispControl1.BackColor = System.Drawing.Color.Black;
             this.dispControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dispControl1.Location = new System.Drawing.Point(0, 0);
+            this.dispControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dispControl1.Name = "dispControl1";
             this.dispControl1.Size = new System.Drawing.Size(482, 562);
             this.dispControl1.TabIndex = 5;
             // 
+            // btn_SaveROI
+            // 
+            this.btn_SaveROI.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_SaveROI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_SaveROI.Location = new System.Drawing.Point(105, 282);
+            this.btn_SaveROI.Name = "btn_SaveROI";
+            this.btn_SaveROI.Size = new System.Drawing.Size(56, 45);
+            this.btn_SaveROI.TabIndex = 38;
+            this.btn_SaveROI.Text = "保存ROI";
+            this.btn_SaveROI.UseVisualStyleBackColor = false;
+            this.btn_SaveROI.Click += new System.EventHandler(this.btn_SaveROI_Click);
+            // 
             // ModelsControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dispControl1);
             this.Controls.Add(this.panel1);
@@ -747,5 +759,6 @@
         private System.Windows.Forms.ComboBox cb_CurCamera;
         private SXDispControl.DispControl dispControl1;
         private System.Windows.Forms.Button btn_SaveROIs;
+        private System.Windows.Forms.Button btn_SaveROI;
     }
 }

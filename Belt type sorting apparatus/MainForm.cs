@@ -616,10 +616,6 @@ namespace Belt_type_sorting_apparatus
             CommonData.saveData.deltaAngel = Convert.ToDouble(textBox4.Text);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DxfControl s = new DxfControl();
-            s.Show();
-        }
+        
     }
 }
